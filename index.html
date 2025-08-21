@@ -646,6 +646,298 @@ src="https://www.facebook.com/tr?id=1089039574891097&ev=PageView&noscript=1"
 />
 <!-- END: Section Divider -->
 
+  
+<!-- START: Special Offer Section -->
+<section
+  id="special-offer-section"
+  style="
+    background: #FFEB3B;
+    border-radius: 12px;
+    padding: 40px 20px;
+    text-align: center;
+    margin: 2em auto;
+    max-width: 400px;
+    position: relative;
+    z-index: 1000;
+  "
+>
+  <button
+    id="special-offer-btn"
+    class="gift-box"
+    style="
+      background: #d32f2f;
+      color: #fff;
+      border: none;
+      padding: 12px 24px;
+      font-size: 1.1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      position: relative;
+      z-index: 1001;
+    "
+  >
+    🎁 Special Offer
+  </button>
+</section>
+<!-- END: Special Offer Section -->
+
+<!-- START: Modal Templates -->
+<!-- Modal 1: $298 Offer -->
+<div
+  id="special-modal-1"
+  class="special-modal"
+  style="
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  "
+>
+  <div
+    class="special-modal-content"
+    style="
+      background: #fff;
+      padding: 24px;
+      width: 90vw;
+      max-width: 400px;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+      position: relative;
+    "
+  >
+    <button
+      class="special-close"
+      data-target="1"
+      style="
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        background: transparent;
+        border: none;
+        font-size: 1.4rem;
+        cursor: pointer;
+        color: #666;
+      "
+    >&times;</button>
+
+    <img
+      src="https://i.postimg.cc/QN7LgZR6/Done-For-You.jpg"
+      alt="Done For You Service"
+      style="width: 100%; border-radius: 4px; margin-bottom: 16px;"
+    />
+
+    <h2 style="margin: 12px 0; line-height: 1.2;">
+      <s style="color: #888; font-size: 1em; margin-right: 0.5em;">$698</s>
+      <s style="color: #888; font-size: 1em; margin-right: 0.5em;">$498</s>
+      <span style="font-size: 2.4em; font-weight: bold; color: #ff4444;">
+        $298
+      </span>
+    </h2>
+
+    <a
+      href="https://buy.stripe.com/4gMeVc0F3cmogWzeo733X00"
+      class="special-buy"
+      target="_blank"
+      rel="noopener"
+      style="
+        display: inline-block;
+        margin-top: 8px;
+        padding: 12px 24px;
+        background: #d32f2f;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 4px;
+      "
+    >Buy Now for $298</a>
+  </div>
+</div>
+
+<!-- Modal 2: Final $148 Offer -->
+<div
+  id="special-modal-2"
+  class="special-modal"
+  style="
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  "
+>
+  <div
+    class="special-modal-content final"
+    style="
+      background: #FFEB3B;
+      padding: 24px;
+      width: 90vw;
+      max-width: 400px;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+      position: relative;
+    "
+  >
+    <button
+      class="special-close"
+      data-target="2"
+      style="
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        background: transparent;
+        border: none;
+        font-size: 1.4rem;
+        cursor: pointer;
+        color: #666;
+      "
+    >&times;</button>
+
+    <img
+      src="https://i.postimg.cc/QN7LgZR6/Done-For-You.jpg"
+      alt="Done For You Service"
+      style="width: 100%; border-radius: 4px; margin-bottom: 16px;"
+    />
+
+    <p style="font-size: 1em; color: #333; margin: 12px 0;">
+      OK, you’re making us work here, here’s our final offer.
+    </p>
+
+    <p
+      id="countdown-timer"
+      style="font-size: 1.2rem; font-weight: bold; color: #333; margin: 8px 0;"
+    >07:00</p>
+
+    <h2 style="margin: 12px 0; font-size: 2.4em; font-weight: bold; color: #d32f2f;">
+      Final Offer: $148
+    </h2>
+
+    <a
+      href="https://buy.stripe.com/3cIbJ087v9acdKncfZ33X01"
+      class="special-buy"
+      target="_blank"
+      rel="noopener"
+      style="
+        display: inline-block;
+        margin-top: 8px;
+        padding: 12px 24px;
+        background: #d32f2f;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: opacity 0.3s;
+      "
+    >Buy Now for $148</a>
+
+    <p style="font-size: 0.9em; color: #555; margin-top: 8px;">
+      for new customers only — turnaround time will be 3 weeks instead of 2
+    </p>
+  </div>
+</div>
+<!-- END: Modal Templates -->
+
+<!-- START: Special Offer Styles -->
+<style>
+  body {
+    overflow-x: hidden;
+  }
+  .special-modal {
+    display: none;
+    display: flex;
+  }
+</style>
+<!-- END: Special Offer Styles -->
+
+<!-- START: Special Offer Script -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const section          = document.getElementById('special-offer-section');
+    const btn              = document.getElementById('special-offer-btn');
+    const m1               = document.getElementById('special-modal-1');
+    const m2               = document.getElementById('special-modal-2');
+    const closes           = document.querySelectorAll('.special-close');
+    const DURATION         = 7 * 60;                // 7 minutes
+    const BLOCK_DURATION   = 24 * 60 * 60 * 1000;   // 24 hours
+    let countdownInterval;
+
+    function disableBuy() {
+      const buyBtn = m2.querySelector('.special-buy');
+      buyBtn.style.pointerEvents = 'none';
+      buyBtn.style.opacity       = '0.5';
+    }
+
+    // On load: if within block window, dim the $148 button
+    const blockedUntil = +localStorage.getItem('specialOfferBlockedUntil');
+    if (blockedUntil && Date.now() < blockedUntil) {
+      disableBuy();
+    } else {
+      localStorage.removeItem('specialOfferStart');
+      localStorage.removeItem('specialOfferBlockedUntil');
+    }
+
+    // Open first modal
+    btn.addEventListener('click', () => {
+      m1.style.display = 'flex';
+    });
+
+    // Close handlers
+    closes.forEach(el => {
+      el.addEventListener('click', e => {
+        const parent = e.target.closest('.special-modal');
+        parent.style.display = 'none';
+        if (parent.id === 'special-modal-1') {
+          m2.style.display = 'flex';
+          startOrResumeCountdown();
+        }
+      });
+    });
+
+    // Countdown persistence
+    function startOrResumeCountdown() {
+      clearInterval(countdownInterval);
+
+      let startTs = +localStorage.getItem('specialOfferStart');
+      if (!startTs) {
+        startTs = Date.now();
+        localStorage.setItem('specialOfferStart', startTs);
+      }
+
+      const timerEl = document.getElementById('countdown-timer');
+
+      function updateTimer() {
+        const elapsed   = Math.floor((Date.now() - startTs) / 1000);
+        const remaining = DURATION - elapsed;
+
+        if (remaining <= 0) {
+          clearInterval(countdownInterval);
+          timerEl.textContent = '00:00';
+          localStorage.setItem(
+            'specialOfferBlockedUntil',
+            Date.now() + BLOCK_DURATION
+          );
+          disableBuy();
+          return;
+        }
+
+        const mins = Math.floor(remaining / 60);
+        const secs = remaining % 60;
+        timerEl.textContent =
+          `${String(mins).padStart(2,'0')}:${String(secs).padStart(2,'0')}`;
+      }
+
+      updateTimer();
+      countdownInterval = setInterval(updateTimer, 1000);
+    }
+  });
+</script>
+<!-- END: Special Offer Script -->
+
+
 <!-- START: Global Impact + Benefits Block -->
 <section style="width: 100%; padding: 3em 1.5em 1.5em; text-align: center;">
   <div style="max-width: 750px; margin: 0 auto;">
