@@ -646,7 +646,7 @@ src="https://www.facebook.com/tr?id=1089039574891097&ev=PageView&noscript=1"
 />
 <!-- END: Section Divider -->
 
-<!-- START: Special Offer Section -->
+  <!-- START: Special Offer Section -->
 <section
   id="special-offer-section"
   style="
@@ -681,6 +681,7 @@ src="https://www.facebook.com/tr?id=1089039574891097&ev=PageView&noscript=1"
 <!-- END: Special Offer Section -->
 
 <!-- START: Modal Templates -->
+
 <!-- Modal 1: $298 Offer -->
 <div
   id="special-modal-1"
@@ -773,9 +774,9 @@ src="https://www.facebook.com/tr?id=1089039574891097&ev=PageView&noscript=1"
     class="special-modal-content final"
     style="
       background: #FFEB3B;
-      padding: 16px 20px;
+      padding: 12px 16px;
       width: 90vw;
-      max-width: 380px;
+      max-width: 360px;
       border-radius: 8px;
       text-align: center;
       box-shadow: 0 8px 24px rgba(0,0,0,0.2);
@@ -800,35 +801,33 @@ src="https://www.facebook.com/tr?id=1089039574891097&ev=PageView&noscript=1"
     <img
       src="https://i.postimg.cc/QN7LgZR6/Done-For-You.jpg"
       alt="Done For You Service"
-      style="width: 100%; border-radius: 4px; margin-bottom: 12px;"
+      style="width: 100%; border-radius: 4px; margin-bottom: 8px;"
     />
 
     <p
       style="
         font-size: 1em;
         color: #333;
-        margin: 8px 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        margin: 4px 0;
       "
     >
-      OK, you’re making us work here, here’s our final offer.
-      <span
-        id="countdown-timer"
-        style="
-          margin-left: 8px;
-          font-size: 1.2rem;
-          font-weight: bold;
-          color: #333;
-        "
-      >07:00</span>
+      OK, you’re making us work! here’s our final offer.
     </p>
+
+    <p
+      id="countdown-timer"
+      style="
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #333;
+        margin: 4px 0;
+      "
+    >07:00</p>
 
     <h2
       style="
-        margin: 4px 0 12px;
-        font-size: 2.4em;
+        margin: 4px 0 8px;
+        font-size: 2.2em;
         font-weight: bold;
         color: #d32f2f;
       "
@@ -844,7 +843,7 @@ src="https://www.facebook.com/tr?id=1089039574891097&ev=PageView&noscript=1"
       style="
         display: inline-block;
         margin-top: 4px;
-        padding: 12px 24px;
+        padding: 10px 20px;
         background: #d32f2f;
         color: #fff;
         text-decoration: none;
@@ -853,8 +852,8 @@ src="https://www.facebook.com/tr?id=1089039574891097&ev=PageView&noscript=1"
       "
     >Buy Now for $148</a>
 
-    <p style="font-size: 0.9em; color: #555; margin-top: 8px;">
-      for new customers only — turnaround time will be 3 weeks instead of 2
+    <p style="font-size: 0.85em; color: #555; margin: 6px 0;">
+      <strong>For new customers only — turnaround time will be 3 weeks instead of 2</strong>
     </p>
   </div>
 </div>
@@ -880,8 +879,8 @@ src="https://www.facebook.com/tr?id=1089039574891097&ev=PageView&noscript=1"
     const modal1         = document.getElementById('special-modal-1');
     const modal2         = document.getElementById('special-modal-2');
     const closes         = document.querySelectorAll('.special-close');
-    const DURATION       = 7 * 60;                // 7 minutes in seconds
-    const BLOCK_DURATION = 24 * 60 * 60 * 1000;   // 24 hours in ms
+    const DURATION       = 7 * 60;                
+    const BLOCK_DURATION = 24 * 60 * 60 * 1000;  
     let countdownInterval;
 
     function disableFinalBuy() {
@@ -890,7 +889,7 @@ src="https://www.facebook.com/tr?id=1089039574891097&ev=PageView&noscript=1"
       buyBtn.style.opacity       = '0.5';
     }
 
-    // 1) Block logic on load
+    // initial block check
     const blockedUntil = localStorage.getItem('specialOfferBlockedUntil');
     const now = Date.now();
     if (blockedUntil && now < +blockedUntil) {
@@ -902,17 +901,14 @@ src="https://www.facebook.com/tr?id=1089039574891097&ev=PageView&noscript=1"
       localStorage.removeItem('specialOfferStart');
     }
 
-    // 2) Open first modal
-    btn.addEventListener('click', () => {
-      modal1.style.display = 'flex';
-    });
+    // open first modal
+    btn.addEventListener('click', () => modal1.style.display = 'flex');
 
-    // 3) Close handlers
+    // close handlers
     closes.forEach(el => {
       el.addEventListener('click', e => {
         const parent = e.target.closest('.special-modal');
         parent.style.display = 'none';
-
         if (parent.id === 'special-modal-1') {
           modal2.style.display = 'flex';
           startOrResumeCountdown();
@@ -920,7 +916,7 @@ src="https://www.facebook.com/tr?id=1089039574891097&ev=PageView&noscript=1"
       });
     });
 
-    // 4) Countdown / persistence logic
+    // countdown logic
     function startOrResumeCountdown() {
       clearInterval(countdownInterval);
 
@@ -961,8 +957,6 @@ src="https://www.facebook.com/tr?id=1089039574891097&ev=PageView&noscript=1"
   });
 </script>
 <!-- END: Special Offer Script -->
-
-
 
 <!-- START: Global Impact + Benefits Block -->
 <section style="width: 100%; padding: 3em 1.5em 1.5em; text-align: center;">
