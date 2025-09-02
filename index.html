@@ -321,171 +321,116 @@ src="https://www.facebook.com/tr?id=1089039574891097&ev=PageView&noscript=1"
     --red: #e10600;
     --black: #000;
     --white: #fff;
-    --gray: #333;
-    --light-gray: #f9f9f9;
   }
-  body, main { font-family: 'Montserrat', sans-serif; color: var(--black); line-height: 1.6; }
-  a { text-decoration: none; color: inherit; }
-  section { padding: 60px 20px; }
-  .center { text-align: center; }
-  h1, h2, h3 { margin-bottom: 20px; }
-  p, ul { margin-bottom: 20px; }
+  body, main { font-family: 'Montserrat', sans-serif; background:var(--black); color:var(--white); }
+  a { text-decoration:none; color:inherit; }
+  section { padding:60px 20px; }
+  .center { text-align:center; }
+  h1, h2, h3 { margin-bottom:20px; }
+  p, ul { margin-bottom:20px; }
 
-  /* PREHEADLINE */
-  #preheadline {
-    position: relative;
-    background: var(--black) center/cover no-repeat url('PREHEAD_BG.jpg');
-    color: var(--white);
+  /* HERO & BANNER */
+  #hero { position:relative; }
+  #banner-video { width:100%; height:400px; background:#111; border-radius:8px; margin-bottom:40px; }
+  #hero-title {
+    font-size:3em; color:var(--red);
+    animation: pop 1.5s ease-in-out infinite alternate;
   }
-  #preheadline::before {
-    content: "Like REIReply but for eCommerce & Service Businesses — Join for just $99/month";
-    position: absolute; top: 20px; left: 50%; transform: translateX(-50%);
-    background: rgba(0,0,0,0.7); padding: 8px 16px; border-radius: 4px;
-    font-size: 0.9em;
+  @keyframes pop {
+    from { transform: scale(1); text-shadow: none; }
+    to   { transform: scale(1.05); text-shadow: 0 0 20px var(--red); }
   }
-  #preheadline h1 {
-    font-size: 2.8em; color: var(--red); margin-top: 80px;
-  }
-  #preheadline p {
-    font-size: 1.2em; max-width: 700px; margin: 20px auto;
-  }
-  #preheadline .cta-btn {
-    display: inline-block; background: var(--red); color: var(--white);
-    padding: 15px 30px; border-radius: 6px; font-weight: 700; margin-top: 20px;
-  }
-  #preheadline .tagline {
-    display: block; margin-top: 8px; font-size: 0.85em; color: var(--light-gray);
+  .cta-btn {
+    display:inline-block; background:var(--red); color:var(--white);
+    padding:15px 30px; border-radius:6px; font-weight:700; margin-top:20px;
   }
 
-  /* FEATURES GRID */
-  #features { background: var(--light-gray); }
+  /* FEATURES */
+  #features { background:var(--black); }
   .features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px; max-width: 1100px; margin: auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px; max-width:1000px; margin:auto;
   }
-  .feature {
-    background: var(--white); border: 2px solid var(--red);
-    border-radius: 8px; padding: 20px; position: relative;
+  .feature-card {
+    background:var(--red); color:var(--white);
+    border:2px solid var(--white); border-radius:8px; padding:20px;
+    text-align:left;
   }
-  .feature h3 { color: var(--red); margin-bottom: 10px; }
-  .feature-icon {
-    position: absolute; top: -20px; right: -20px;
-    width: 40px; height: 40px;
-  }
+  .feature-card h3 { margin-bottom:10px; }
 
   /* ANIMATIONS */
-  @keyframes slideBubbles {
-    0% { transform: translateX(-50px); opacity: 0; }
-    50% { opacity: 1; }
-    100% { transform: translateX(0); opacity: 0; }
+  .chat-animation, .engine-animation {
+    width:80px; height:80px; margin:10px 0;
+    background-size:contain; background-repeat:no-repeat; background-position:center;
   }
-  @keyframes rotateGear {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
-  .chat-animation {
-    width: 80px; height: 80px;
-    background: url('CHAT-ANIM.png') no-repeat center/contain;
-    margin: 20px auto;
-    animation: slideBubbles 2s infinite ease-in-out;
-  }
-  .engine-animation {
-    width: 80px; height: 80px;
-    background: url('ENGINE-ANIM.png') no-repeat center/contain;
-    margin: 20px auto;
-    animation: rotateGear 3s infinite linear;
-  }
+  .chat-animation { background-image:url('CHAT-ANIM.gif'); }
+  .engine-animation { background-image:url('ENGINE-ANIM.gif'); }
 
-  /* GAME CHANGERS */
-  #gamechangers { background: var(--white); }
-  #gamechangers ul { list-style: none; max-width: 800px; margin: auto; }
-  #gamechangers li {
-    position: relative; padding-left: 30px; margin-bottom: 15px; font-size: 1.1em;
+  /* GAME CHANGERS, USE CASES, WHY US */
+  section ul {
+    list-style:none; max-width:800px; margin:auto; text-align:left;
   }
-  #gamechangers li::before {
-    content: "✔"; position: absolute; left: 0; color: var(--red); font-weight: 700;
-  }
-
-  /* USE CASES */
-  #usecases { background: var(--light-gray); }
-  #usecases ul { list-style: none; max-width: 800px; margin: auto; }
-  #usecases li {
-    position: relative; padding-left: 30px; margin-bottom: 15px; font-size: 1em;
+  #gamechangers li::before,
+  #whyus li::before {
+    content:'✔'; margin-right:10px; color:var(--red); font-weight:700;
   }
   #usecases li::before {
-    content: url('ICON-USECASE.svg'); position: absolute; left: 0; top: 2px;
-  }
-
-  /* WHY US */
-  #whyus { background: var(--white); }
-  #whyus ul { list-style: none; max-width: 800px; margin: auto; }
-  #whyus li {
-    position: relative; padding-left: 30px; margin-bottom: 15px;
-  }
-  #whyus li::before {
-    content: "✔"; position: absolute; left: 0; color: var(--red); font-weight: 700;
+    content:url('ICON-BULLET.svg'); margin-right:10px;
   }
 
   /* TIERS */
-  #tiers { background: var(--black); color: var(--white); }
+  #tiers { background:var(--black); }
   .tier-box {
-    background: var(--white); color: var(--black);
-    border: 2px solid var(--red); border-radius: 8px;
-    padding: 30px; max-width: 600px; margin: 30px auto;
+    background:var(--red); color:var(--white);
+    border:2px solid var(--white); border-radius:8px;
+    padding:30px; max-width:600px; margin:30px auto; text-align:left;
   }
-  .tier-box h3 { color: var(--red); margin-bottom: 10px; }
-  .tier-box ul { list-style: none; padding-left: 0; }
-  .tier-box li { margin-bottom: 10px; }
-  .tier-box .price { font-size: 1.3em; font-weight: 700; margin: 20px 0; }
-  .tier-box .small-print { font-size: 0.85em; color: var(--gray); }
+  .tier-box h3 { margin-bottom:10px; }
+  .tier-box .price { font-size:1.3em; font-weight:700; margin:15px 0; }
 
   /* FOOTER CTA */
-  #footer-cta { background: var(--red); color: var(--white); text-align: center; }
+  #footer-cta { background:var(--red); color:var(--white); }
+  #footer-cta h2 { margin-bottom:20px; }
   #footer-cta .cta-btn {
-    background: var(--black); color: var(--white);
-    padding: 15px 30px; border-radius: 6px; font-weight: 700; margin-top: 20px;
+    background:var(--black); color:var(--white);
   }
 </style>
 
-<main id="bizbuild-body">
+<main>
 
-  <!-- PREHEADLINE & CTA -->
-  <section id="preheadline" class="center">
-    <h1>Launch Your AI-Powered Superstore</h1>
-    <p>End-to-end eCommerce & Service funnels inside HighLevel—fully branded, conversion-optimized, and yours to manage.</p>
+  <!-- HERO + BANNER VIDEO -->
+  <section id="hero" class="center">
+    <div id="banner-video">
+      <!-- Paste your video embed or <video> tag here -->
+    </div>
+    <h1 id="hero-title">We Build eCommerce Stores That Convert</h1>
     <a href="#tiers" class="cta-btn">Launch Now for $99</a>
-    <span class="tagline">High-converting AI-powered superstore</span>
   </section>
 
   <!-- FEATURES -->
   <section id="features">
     <h2 class="center">Our All-in-One Commerce Suite</h2>
     <div class="features-grid">
-      <div class="feature">
-        <img src="ICON-STOREFRONT.svg" class="feature-icon" alt="Storefront Icon"/>
+      <div class="feature-card">
         <h3>Conversion-Ready Storefront</h3>
         <p>Vibrant, mobile-first storefronts with built-in upsells and persuasive CTAs.</p>
       </div>
-      <div class="feature">
-        <img src="ICON-CATALOG.svg" class="feature-icon" alt="Catalog Icon"/>
+      <div class="feature-card">
         <h3>Self-Managed Catalog</h3>
         <p>Full control over SKUs, variants, pricing, and inventory—no bottlenecks.</p>
       </div>
-      <div class="feature">
-        <img src="ICON-ENGINE.svg" class="feature-icon" alt="Engine Icon"/>
+      <div class="feature-card">
         <div class="engine-animation"></div>
         <h3>Automated Sales Engine</h3>
         <p>Cart recovery, upsells, loyalty flows, and review requests—100% automated.</p>
       </div>
-      <div class="feature">
-        <img src="ICON-CHAT.svg" class="feature-icon" alt="Chat Icon"/>
+      <div class="feature-card">
         <div class="chat-animation"></div>
         <h3>AI-Powered Chat & Support</h3>
         <p>24/7 chat that answers questions, nurtures leads, and routes support seamlessly.</p>
       </div>
-      <div class="feature">
-        <img src="ICON-PAYMENT.svg" class="feature-icon" alt="Payment Icon"/>
+      <div class="feature-card">
         <h3>Payment Gateway Integration</h3>
         <p>Connect Stripe or PayPal—subscriptions, trials, and one-time purchases wired in.</p>
       </div>
@@ -514,7 +459,7 @@ src="https://www.facebook.com/tr?id=1089039574891097&ev=PageView&noscript=1"
       <li>Dentists & Clinics: Send appointment reminders & new-patient offers</li>
       <li>Salons & Spas: Auto-remind bookings, upsell add-ons, drive rebooks</li>
       <li>Coaches & Consultants: Engage prospects via multi-channel nurture</li>
-      <li>Local Retail: Push flash sales, new arrivals, and loyalty programs</li>
+      <li>Local Retail: Push flash sales, new arrivals, loyalty programs</li>
     </ul>
   </section>
 
@@ -530,26 +475,25 @@ src="https://www.facebook.com/tr?id=1089039574891097&ev=PageView&noscript=1"
     </ul>
   </section>
 
-  <!-- TIERS -->
+  <!-- SERVICE TIERS -->
   <section id="tiers">
-    <h2 class="center" style="color: var(--white);">Choose Your Launch Package</h2>
+    <h2 class="center">Choose Your Launch Package</h2>
 
     <div class="tier-box">
       <h3>Tier 1: Done-With-You</h3>
       <p class="price">$249 setup | $99/mo</p>
       <ul>
-        <li>Choose from proven funnel templates</li>
+        <li>Pick from proven funnel templates</li>
         <li>Pre-wired automations: cart recovery, upsells, bookings</li>
-        <li>24/7 AI chat assistant on every page</li>
+        <li>24/7 AI chat assistant</li>
         <li>Full catalog manager access</li>
         <li>Stripe & PayPal checkout integration</li>
       </ul>
-      <p class="small-print">You handle products & gateway—​we handle the build.</p>
     </div>
 
     <div class="tier-box">
       <h3>Tier 2: Done-For-You</h3>
-      <p class="price">$1,200 setup | $249/mo</p>
+      <p class="price">$999 setup | $99/mo</p>
       <ul>
         <li>Custom funnel design & brand-aligned copy</li>
         <li>Product library setup + image uploads</li>
@@ -557,12 +501,11 @@ src="https://www.facebook.com/tr?id=1089039574891097&ev=PageView&noscript=1"
         <li>Advanced AI chat with smart routing</li>
         <li>Dynamic upsell & reactivation flows</li>
       </ul>
-      <p class="small-print">Approve design & reports—​we manage the rest.</p>
     </div>
 
     <div class="tier-box">
       <h3>Tier 3: Performance Partner</h3>
-      <p class="price">$2,500 setup | $499/mo</p>
+      <p class="price">$4,999 setup | $199/mo</p>
       <ul>
         <li>All Tier 2 features plus weekly audits & A/B tests</li>
         <li>Quarterly funnel rebuilds & strategic pivots</li>
@@ -570,19 +513,30 @@ src="https://www.facebook.com/tr?id=1089039574891097&ev=PageView&noscript=1"
         <li>Inventory sync & multi-gateway orchestration</li>
         <li>Behavior-based follow-up sequences</li>
       </ul>
-      <p class="small-print">You set goals—​we drive scaled growth.</p>
     </div>
   </section>
 
   <!-- FOOTER CTA -->
-  <section id="footer-cta">
-    <h2 class="center">Ready to Transform Your Business?</h2>
+  <section id="footer-cta" class="center">
+    <h2>Ready to Transform Your Business?</h2>
     <a href="#tiers" class="cta-btn">Launch Now for $99</a>
-    <p class="center" style="margin-top:15px;">High-converting AI-powered superstore</p>
   </section>
 
 </main>
 
+<!-- ASSET REQUESTS -->
+<!--
+1. Banner video file or embed URL for #banner-video
+2. ICON-STOREFRONT.svg
+3. ICON-CATALOG.svg
+4. ICON-ENGINE.svg
+5. ICON-CHAT.svg
+6. ICON-PAYMENT.svg
+7. CHAT-ANIM.gif (chat bubble animation)
+8. ENGINE-ANIM.gif (rotating gear animation)
+9. ICON-BULLET.svg (use-case list bullets)
+10. ICON-CHECK.svg (game-changer & why-us bullets)
+-->
 
 <!-- START: Section Divider -->
 <hr
