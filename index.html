@@ -299,357 +299,243 @@ src="https://www.facebook.com/tr?id=1089039574891097&ev=PageView&noscript=1"
   </header>
 
 
-<style>
+
+  <style>
   /* RESET & VARIABLES */
   * { margin: 0; padding: 0; box-sizing: border-box; }
   :root {
     --electric-red: #ff0033;
-    --metallic-red-gradient: linear-gradient(45deg, #ff1a1a, #cc0000);
+    --gold: #ffd700;
     --black: #000;
     --white: #fff;
   }
-
-  body, main { font-family: 'Montserrat', sans-serif; }
+  body, main { font-family: 'Montserrat', sans-serif; background: var(--black); color: var(--white); }
+  a { text-decoration: none; }
+  section { padding: 60px 20px; background: var(--black); }
   .center { text-align: center; }
-  section { padding: 60px 20px; }
-  h1, h2, h3 { margin-bottom: 20px; }
-  p, ul { margin-bottom: 20px; }
-
-  /* THEMES */
-  .section-white { background: var(--white); color: var(--black); }
-  .section-black { background: var(--black); color: var(--white); }
 
   /* HERO */
-  #hero-video-placeholder {
-    width: 100%;
-    max-width: 1200px;
-    height: 400px;
-    background: #111;
-    margin: 0 auto 40px;
-    border-radius: 8px;
+  #hero-video {  
+    width: 100%; max-width: 1200px; height: 400px;
+    background: #111; margin: 0 auto 30px; border-radius: 8px;
   }
-  #hero h1 {
-    font-size: 3em;
-    font-weight: 700;
-    color: var(--black);
-  }
-  .btn-red {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 15px 30px;
-    background: var(--electric-red);
-    color: var(--white);
-    border-radius: 6px;
-    font-weight: 700;
+  #hero-title {
+    font-size: 3em; font-weight: 700; color: var(--white);
   }
   .hero-tagline {
-    margin-top: 10px;
-    font-size: 1.2em;
-    color: var(--electric-red);
-    font-weight: 600;
+    font-size: 1em; color: var(--electric-red); margin-top: 10px;
+  }
+  .btn-red {
+    display: inline-block; margin-top: 20px;
+    padding: 15px 30px; background: var(--electric-red);
+    color: var(--white); border-radius: 6px; font-weight: 700;
   }
 
-  /* FEATURES */
-  #features-title {
-    font-size: 2.5em;
-    font-weight: 700;
-    margin-bottom: 30px;
-  }
+  /* FEATURE CARDS */
   .features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    max-width: 1000px;
-    margin: 0 auto;
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+    gap: 30px; max-width: 1000px; margin: 40px auto 0;
   }
   .feature-card {
-    background: transparent;
-    border: 2px solid var(--electric-red);
-    border-radius: 8px;
-    padding: 20px;
-    text-align: left;
+    border: 2px solid var(--gold); border-radius: 8px;
+    padding: 20px; text-align: left;
   }
   .feature-card h3 {
-    color: var(--electric-red);
-    font-size: 1.2em;
-    margin-bottom: 10px;
+    font-size: 1.2em; color: var(--electric-red); margin-bottom: 10px;
   }
+  .feature-card p { font-size: 0.95em; }
 
   /* GAME CHANGERS */
   #gamechangers ul {
-    list-style: none;
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: left;
+    list-style: none; max-width: 800px; margin: 20px auto 0; text-align: left;
   }
   #gamechangers li {
-    margin-bottom: 10px;
+    margin-bottom: 10px; position: relative; padding-left: 25px;
   }
   #gamechangers li::before {
-    content: '✔';
-    color: var(--electric-red);
-    margin-right: 10px;
-    font-weight: 700;
+    content: '✔'; color: var(--electric-red);
+    position: absolute; left: 0; top: 0; font-weight: 700;
   }
 
-  /* AI SECTION */
-  #ai-section h2 {
-    font-size: 2em;
-    font-weight: 700;
-    color: var(--electric-red);
+  /* AI OVERVIEW */
+  #ai-overview { margin-top: 60px; }
+  #ai-overview h2 {
+    font-size: 2em; font-weight: 700; color: var(--electric-red); margin-bottom: 30px;
   }
-  .ai-block {
-    max-width: 800px;
-    margin: 40px auto;
-    text-align: center;
+  .ai-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+    gap: 30px; max-width: 900px; margin: 0 auto;
   }
-  .ai-block h3 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
+  .ai-card {
+    border: 2px solid var(--gold); border-radius: 8px; padding: 20px; text-align: left;
   }
-  .ai-block p {
-    font-size: 1em;
-    max-width: 700px;
-    margin: 0 auto 20px;
+  .ai-card h3 {
+    font-size: 1.2em; color: var(--electric-red); margin-bottom: 10px;
   }
-  .ai-image-placeholder {
-    width: 100%;
-    height: 250px;
-    background: #222;
-    border-radius: 8px;
-    margin: 0 auto;
-  }
+  .ai-card p { font-size: 0.95em; }
 
   /* NEVER MISS A SALE */
-  #usecases h2 {
-    font-size: 2em;
-    font-weight: 700;
-    margin-bottom: 30px;
+  #usecases ul {
+    list-style: disc inside; max-width: 800px; margin: 20px auto 0; text-align: left;
   }
   #usecases-banner {
-    width: 100%;
-    height: 250px;
-    background: #ccc;
-    margin: 20px auto;
-    border-radius: 8px;
-  }
-  #usecases ul {
-    list-style: disc inside;
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: left;
-  }
-  #usecases li {
-    margin-bottom: 10px;
-  }
-
-  /* WHY US */
-  #whyus ul {
-    list-style: none;
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: left;
-  }
-  #whyus li {
-    margin-bottom: 10px;
-  }
-  #whyus li::before {
-    content: '✔';
-    color: var(--electric-red);
-    margin-right: 10px;
-    font-weight: 700;
+    width: 100%; height: 250px; background: #222; margin: 30px auto; border-radius: 8px;
   }
 
   /* TIERS */
   #tiers-title {
-    font-size: 2.5em;
-    font-weight: 700;
-    background: var(--metallic-red-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-align: center;
-    margin-bottom: 40px;
+    font-size: 2.5em; font-weight: 700;
+    background: var(--electric-red); background-clip: text; -webkit-text-fill-color: transparent;
+    text-align: center; margin-bottom: 40px;
   }
   .tier-box {
-    background: var(--black);
-    border: 3px solid var(--electric-red);
-    border-radius: 8px;
-    padding: 30px;
-    max-width: 600px;
-    margin: 30px auto;
-    text-align: left;
+    border: 2px solid var(--gold); border-radius: 8px;
+    padding: 30px; max-width: 600px; margin: 30px auto; text-align: left;
   }
   .tier-box h3 {
-    font-size: 1.4em;
-    margin-bottom: 10px;
+    font-size: 1.4em; color: var(--electric-red); margin-bottom: 10px;
   }
   .tier-box .price {
-    font-size: 1.3em;
-    font-weight: 700;
-    margin: 15px 0;
-    color: var(--electric-red);
+    font-size: 1.3em; font-weight: 700; color: var(--electric-red); margin: 15px 0;
   }
+  .tier-box p, .tier-box ul { color: var(--white); font-size: 0.95em; }
 
   /* FOOTER CTA */
   #footer-cta h2 {
-    font-size: 2em;
-    font-weight: 700;
-    margin-bottom: 20px;
-    color: var(--electric-red);
+    font-size: 2em; font-weight: 700; color: var(--electric-red); margin-bottom: 20px;
   }
 </style>
 
 <main>
   <!-- HERO -->
-  <section id="hero" class="section-white center">
-    <div id="hero-video-placeholder"></div>
-    <h1>We Build eCommerce Stores That Convert</h1>
+  <section id="hero" class="center">
+    <div id="hero-video"></div>
+    <h1 id="hero-title">We Build eCommerce Stores That Convert</h1>
     <a href="#tiers" class="btn-red">Launch Now for $99</a>
-    <p class="hero-tagline">high converting AI powered superstore</p>
+    <div class="hero-tagline">high converting AI powered superstore</div>
   </section>
 
   <!-- FEATURES -->
-  <section id="features" class="section-black">
-    <h2 id="features-title" class="center">Our All-in-One Commerce Suite</h2>
+  <section id="features">
+    <h2 class="center">Our All-in-One Commerce Suite</h2>
     <div class="features-grid">
       <div class="feature-card">
         <h3>Conversion-Ready Storefront</h3>
-        <p>Vibrant, mobile-first storefronts with built-in upsells and persuasive CTAs.</p>
+        <p>Mobile-first designs with upsells, cross-sells and persuasive CTAs baked in.</p>
       </div>
       <div class="feature-card">
         <h3>Self-Managed Catalog</h3>
-        <p>Full control over SKUs, variants, pricing, and inventory—no bottlenecks.</p>
+        <p>Clients control SKUs, variants and inventory—no bottlenecks, no back-and-forth.</p>
       </div>
       <div class="feature-card">
         <h3>Automated Sales Engine</h3>
-        <p>Cart recovery, upsells, loyalty flows, and review requests—100% automated.</p>
+        <p>Abandoned-cart recovery, post-purchase offers and loyalty triggers on autopilot.</p>
       </div>
       <div class="feature-card">
-        <h3>AI-Powered Chat & Support</h3>
-        <p>24/7 AI chat that answers questions, nurtures leads, and routes support seamlessly.</p>
+        <h3>AI-Powered Support</h3>
+        <p>24/7 chat across site, email, SMS and social—with smart routing for real humans.</p>
       </div>
       <div class="feature-card">
-        <h3>Payment Gateway Integration</h3>
-        <p>Connect Stripe or PayPal—subscriptions, trials, and one-time purchases wired in.</p>
+        <h3>Payment Gateway Setup</h3>
+        <p>Stripe, PayPal and subscription checkout integrated in minutes—not days.</p>
       </div>
     </div>
   </section>
 
   <!-- GAME CHANGERS -->
-  <section id="gamechangers" class="section-white">
+  <section id="gamechangers">
     <h2 class="center">Game Changers for Business Owners</h2>
     <ul>
-      <li>Automate 80% of sales tasks—free your time</li>
-      <li>Scale without extra headcount—AI never sleeps</li>
-      <li>Complete control of products, pricing & inventory</li>
-      <li>24/7 follow-up—never miss a single lead</li>
-      <li>Editable templates—pivot offers in minutes</li>
-      <li>Data-driven optimization—maximize ROI continuously</li>
+      <li>Automate 80% of sales tasks—free up your calendar</li>
+      <li>Scale instantly—no extra headcount needed</li>
+      <li>Full product & pricing control in one dashboard</li>
+      <li>24/7 follow-up—never lose a single lead</li>
+      <li>Swap templates in seconds—pivot on a dime</li>
+      <li>Data-driven optimizations for max ROI</li>
     </ul>
   </section>
 
-  <!-- AI SECTION -->
-  <section id="ai-section" class="section-black">
-    <h2 class="center">Why juggle 5 tools and pay for 6?</h2>
-    <div class="ai-block">
-      <p>BizBuild's newest offer replaces your CRM, dialer, text blaster, seller leads, automations, and VAs... all in one $99 system</p>
-      <div class="ai-image-placeholder"></div>
-    </div>
-    <div class="ai-block">
-      <h3>Let the AI Do the Hustling For You</h3>
-      <p>Our AI voice agent qualifies leads, books appointments, and follows up 24/7. You just focus on closing. The system handles the 24/7 grind.</p>
-      <div class="ai-image-placeholder"></div>
-    </div>
-    <div class="ai-block">
-      <h3>Built by Investors. Powered by Closers</h3>
-      <p>You’re not just getting software—you’re joining thousands of investors already using AI to dominate their markets, every single day.</p>
-      <div class="ai-image-placeholder"></div>
+  <!-- AI OVERVIEW -->
+  <section id="ai-overview">
+    <h2 class="center">AI-Powered Qualifying, Bookings & Support</h2>
+    <div class="ai-grid">
+      <div class="ai-card">
+        <h3>AI Voice Agents</h3>
+        <p>AI becomes your brand’s voice—outbound & inbound calls, texts, email and social DMs.</p>
+      </div>
+      <div class="ai-card">
+        <h3>AI Inquiry Qualifying</h3>
+        <p>Intelligent bots vet every customer question, guiding them to the right product or service.</p>
+      </div>
+      <div class="ai-card">
+        <h3>AI Order Management</h3>
+        <p>End missed orders, double-booking or lost appointments with automated tracking & alerts.</p>
+      </div>
     </div>
   </section>
 
   <!-- NEVER MISS A SALE -->
-  <section id="usecases" class="section-white">
+  <section id="usecases">
     <h2 class="center">Never Miss a Sale</h2>
     <div id="usecases-banner"></div>
     <ul>
-      <li>eCommerce: Recover abandoned carts with timed SMS & email</li>
-      <li>Real Estate: Instantly text form leads, match properties, book showings</li>
-      <li>Dentists & Clinics: Send appointment reminders & new-patient offers</li>
-      <li>Salons & Spas: Auto-remind bookings, upsell add-ons, drive rebooks</li>
-      <li>Coaches & Consultants: Engage prospects via multi-channel nurture</li>
-      <li>Local Retail: Push flash sales, new arrivals, loyalty programs</li>
-    </ul>
-  </section>
-
-  <!-- WHY US -->
-  <section id="whyus" class="section-black">
-    <h2 class="center">Why BizBuild?</h2>
-    <ul>
-      <li>Speed builds trust: Instant replies earn credibility</li>
-      <li>Emotion drives action: Story-driven messaging ignites desire</li>
-      <li>Persistence boosts profit: 75% of sales close after 3+ touches</li>
-      <li>Modular design: Swap offers or templates in minutes</li>
-      <li>AI insights: Continuous optimization for maximum ROI</li>
+      <li>eCommerce: recover abandoned carts via timed SMS & email</li>
+      <li>Local Services: auto-schedule appointments and send reminders</li>
+      <li>Memberships: upsell renewals with personalized follow-up flows</li>
+      <li>Consulting: nurture leads via multi-channel touchpoints</li>
+      <li>Retail: flash-sale alerts with geo-targeted push messages</li>
+      <li>Health & Wellness: automate intake forms and booking confirmations</li>
     </ul>
   </section>
 
   <!-- TIERS -->
-  <section id="tiers" class="section-white">
+  <section id="tiers">
     <h2 id="tiers-title">Choose Your Launch Package</h2>
 
     <div class="tier-box">
       <h3>Tier 1: Done-With-You</h3>
-      <p class="price">$249 setup | $99/mo</p>
+      <div class="price">$249 setup | $99/mo</div>
       <ul>
         <li>Pick from proven funnel templates</li>
-        <li>Pre-wired automations: cart recovery, upsells, bookings</li>
-        <li>24/7 AI chat assistant</li>
+        <li>Pre-wired automations: cart recovery & upsells</li>
+        <li>24/7 AI support chat</li>
         <li>Full catalog manager access</li>
-        <li>Stripe & PayPal checkout integration</li>
+        <li>Stripe & PayPal setup</li>
       </ul>
     </div>
 
     <div class="tier-box">
       <h3>Tier 2: Done-For-You</h3>
-      <p class="price">$999 setup | $99/mo</p>
+      <div class="price">$999 setup | $99/mo</div>
       <ul>
-        <li>Custom funnel design & brand-aligned copy</li>
-        <li>Product library setup + image uploads</li>
-        <li>Monthly campaigns & performance tuning</li>
-        <li>Advanced AI chat with smart routing</li>
-        <li>Dynamic upsell & reactivation flows</li>
+        <li>Custom funnel & copywriting</li>
+        <li>Product uploads & image gallery</li>
+        <li>Monthly campaign tuning</li>
+        <li>Advanced AI chat with routing</li>
+        <li>Dynamic upsell sequences</li>
       </ul>
     </div>
 
     <div class="tier-box">
       <h3>Tier 3: Performance Partner</h3>
-      <p class="price">$4,999 setup | $199/mo</p>
+      <div class="price">$4,999 setup | $199/mo</div>
       <ul>
-        <li>All Tier 2 features plus weekly audits & A/B tests</li>
-        <li>Quarterly funnel rebuilds & strategic pivots</li>
-        <li>Enterprise AI system: custom chat logic & routing</li>
-        <li>Inventory sync & multi-gateway orchestration</li>
-        <li>Behavior-based follow-up sequences</li>
+        <li>All Tier 2 plus weekly audits & A/B tests</li>
+        <li>Quarterly funnel rebuilds</li>
+        <li>Custom AI logic & multi-gateway sync</li>
+        <li>Inventory orchestration</li>
+        <li>Behavior-driven follow-ups</li>
       </ul>
     </div>
   </section>
 
   <!-- FOOTER CTA -->
-  <section id="footer-cta" class="section-black center">
+  <section id="footer-cta" class="center">
     <h2>Ready to Transform Your Business?</h2>
     <a href="#tiers" class="btn-red">Launch Now for $99</a>
   </section>
 </main>
 
-<!-- ASSET REQUESTS -->
-<ul>
-  <li><strong>Hero Banner Video</strong>: a 10–15 second looping montage showcasing a high-conversion eCommerce store in action—product browsing, seamless checkout, AI chat pop-ups. (16:9, high-contrast, dynamic cuts)</li>
-  <li><strong>Feature Icons</strong>: five SVG line icons (storefront, catalog, engine, chat, payment)—white strokes with electric-red highlights, minimal, modern.</li>
-  <li><strong>AI Section Image 1</strong>: a single hub graphic consolidating CRM, dialer, text blaster, seller-lead icons, automations, VAs—dark background, neon red accents, futuristic.</li>
-  <li><strong>AI Section Image 2</strong>: illustration of an AI voice agent juggling calls and messages—clean vector art with red accent lines, friendly yet tech-forward.</li>
-  <li><strong>AI Section Image 3</strong>: abstract collage of investor silhouettes or avatars with red glow outlines—conveys community and power.</li>
-  <li><strong>Never Miss a Sale Banner</strong>: white-themed graphic showing multi-channel notifications (email, SMS, push) converging into a store icon—sleek, clean lines, subtle red accents.</li>
-</ul>
 
 <!-- START: Section Divider -->
 <hr
