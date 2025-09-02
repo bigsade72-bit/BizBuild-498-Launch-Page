@@ -25,7 +25,7 @@ src="https://www.facebook.com/tr?id=1089039574891097&ev=PageView&noscript=1"
 </head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Not Just Clicks — Social Media Ads That Convert</title>
+<title>Not Just A Store — An AI Powered Store That Converts</title>
 <style>
   body {
     margin: 0;
@@ -292,8 +292,8 @@ src="https://www.facebook.com/tr?id=1089039574891097&ev=PageView&noscript=1"
       <div class="brand-text">BizBuild</div>
     </div>
     <div class="title-group">
-      <span>Not Just Clicks.</span>
-      <span>Ads That Convert.</span>
+      <span>Not Just A Store.</span>
+      <span>AI Powered Stores That Convert.</span>
     </div>
     <h2>Strategy → Traffic → Measurable ROI</h2>
   </header>
@@ -313,130 +313,276 @@ src="https://www.facebook.com/tr?id=1089039574891097&ev=PageView&noscript=1"
   Select Your Offer
 </h2>
 
-<!-- Level 1  Conversion Tuneup block -->
-<section style="background:#222; color:#fff; text-align:center; padding:1em 0; margin:0;">
-  <h3 style="margin:0; font-size:1.5em; font-weight:700;">
-    Level 1
-  </h3>
-</section>
-<!-- 🔴 BIZBUILD ECOMMERCE FUNNEL SCRIPT -->
-<!-- Theme: Red (#d10000), Black (#000), White (#fff) -->
-<!-- Fonts: Bold, clean sans-serif (e.g., Inter, Montserrat) -->
-<!-- Layout: Mobile-first, modular, CTA-driven -->
+<!-- BODY CONTENT FOR BIZBUILD FUNNEL (EXCLUDE TITLE PAGE) -->
+<style>
+  /* RESET & VARIABLES */
+  * { margin:0; padding:0; box-sizing:border-box; }
+  :root {
+    --red: #e10600;
+    --black: #000;
+    --white: #fff;
+    --gray: #333;
+    --light-gray: #f9f9f9;
+  }
+  body, main { font-family: 'Montserrat', sans-serif; color: var(--black); line-height: 1.6; }
+  a { text-decoration: none; color: inherit; }
+  section { padding: 60px 20px; }
+  .center { text-align: center; }
+  h1, h2, h3 { margin-bottom: 20px; }
+  p, ul { margin-bottom: 20px; }
 
-<!-- ✅ SECTION 1: HERO HEADER -->
-<section id="hero-header" style="background:#000; color:#fff; padding:80px 20px; text-align:center;">
-  <h1 style="font-size:3em; color:#d10000;">We Build eCommerce Stores That Convert</h1>
-  <p style="font-size:1.2em; max-width:700px; margin:auto;">Fully branded. Mobile-first. Conversion-optimized. Then we hand you the keys. You control your products, pricing, and inventory. We handle the automation and funnel logic that turns browsers into buyers.</p>
-  <a href="#tiers" style="display:inline-block; margin-top:30px; background:#d10000; color:#fff; padding:15px 30px; font-weight:bold; border-radius:6px; text-decoration:none;">Choose Your Launch Tier</a>
-</section>
+  /* PREHEADLINE */
+  #preheadline {
+    position: relative;
+    background: var(--black) center/cover no-repeat url('PREHEAD_BG.jpg');
+    color: var(--white);
+  }
+  #preheadline::before {
+    content: "Like REIReply but for eCommerce & Service Businesses — Join for just $99/month";
+    position: absolute; top: 20px; left: 50%; transform: translateX(-50%);
+    background: rgba(0,0,0,0.7); padding: 8px 16px; border-radius: 4px;
+    font-size: 0.9em;
+  }
+  #preheadline h1 {
+    font-size: 2.8em; color: var(--red); margin-top: 80px;
+  }
+  #preheadline p {
+    font-size: 1.2em; max-width: 700px; margin: 20px auto;
+  }
+  #preheadline .cta-btn {
+    display: inline-block; background: var(--red); color: var(--white);
+    padding: 15px 30px; border-radius: 6px; font-weight: 700; margin-top: 20px;
+  }
+  #preheadline .tagline {
+    display: block; margin-top: 8px; font-size: 0.85em; color: var(--light-gray);
+  }
 
-<!-- 🚀 SECTION 2: WHAT YOU DELIVER -->
-<section id="core-offer" style="background:#fff; color:#000; padding:60px 20px;">
-  <h2 style="color:#d10000; text-align:center;">What You Deliver</h2>
-  <div style="display:grid; grid-template-columns:1fr 1fr; gap:40px; max-width:1000px; margin:auto;">
-    <div>
-      <h3>Conversion-Ready Storefront</h3>
-      <p>Fully branded site or funnel built inside HighLevel. Mobile-first layout with product sections, upsells, and CTA logic. Pre-wired templates they can edit without touching code.</p>
+  /* FEATURES GRID */
+  #features { background: var(--light-gray); }
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px; max-width: 1100px; margin: auto;
+  }
+  .feature {
+    background: var(--white); border: 2px solid var(--red);
+    border-radius: 8px; padding: 20px; position: relative;
+  }
+  .feature h3 { color: var(--red); margin-bottom: 10px; }
+  .feature-icon {
+    position: absolute; top: -20px; right: -20px;
+    width: 40px; height: 40px;
+  }
+
+  /* ANIMATIONS */
+  @keyframes slideBubbles {
+    0% { transform: translateX(-50px); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: translateX(0); opacity: 0; }
+  }
+  @keyframes rotateGear {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  .chat-animation {
+    width: 80px; height: 80px;
+    background: url('CHAT-ANIM.png') no-repeat center/contain;
+    margin: 20px auto;
+    animation: slideBubbles 2s infinite ease-in-out;
+  }
+  .engine-animation {
+    width: 80px; height: 80px;
+    background: url('ENGINE-ANIM.png') no-repeat center/contain;
+    margin: 20px auto;
+    animation: rotateGear 3s infinite linear;
+  }
+
+  /* GAME CHANGERS */
+  #gamechangers { background: var(--white); }
+  #gamechangers ul { list-style: none; max-width: 800px; margin: auto; }
+  #gamechangers li {
+    position: relative; padding-left: 30px; margin-bottom: 15px; font-size: 1.1em;
+  }
+  #gamechangers li::before {
+    content: "✔"; position: absolute; left: 0; color: var(--red); font-weight: 700;
+  }
+
+  /* USE CASES */
+  #usecases { background: var(--light-gray); }
+  #usecases ul { list-style: none; max-width: 800px; margin: auto; }
+  #usecases li {
+    position: relative; padding-left: 30px; margin-bottom: 15px; font-size: 1em;
+  }
+  #usecases li::before {
+    content: url('ICON-USECASE.svg'); position: absolute; left: 0; top: 2px;
+  }
+
+  /* WHY US */
+  #whyus { background: var(--white); }
+  #whyus ul { list-style: none; max-width: 800px; margin: auto; }
+  #whyus li {
+    position: relative; padding-left: 30px; margin-bottom: 15px;
+  }
+  #whyus li::before {
+    content: "✔"; position: absolute; left: 0; color: var(--red); font-weight: 700;
+  }
+
+  /* TIERS */
+  #tiers { background: var(--black); color: var(--white); }
+  .tier-box {
+    background: var(--white); color: var(--black);
+    border: 2px solid var(--red); border-radius: 8px;
+    padding: 30px; max-width: 600px; margin: 30px auto;
+  }
+  .tier-box h3 { color: var(--red); margin-bottom: 10px; }
+  .tier-box ul { list-style: none; padding-left: 0; }
+  .tier-box li { margin-bottom: 10px; }
+  .tier-box .price { font-size: 1.3em; font-weight: 700; margin: 20px 0; }
+  .tier-box .small-print { font-size: 0.85em; color: var(--gray); }
+
+  /* FOOTER CTA */
+  #footer-cta { background: var(--red); color: var(--white); text-align: center; }
+  #footer-cta .cta-btn {
+    background: var(--black); color: var(--white);
+    padding: 15px 30px; border-radius: 6px; font-weight: 700; margin-top: 20px;
+  }
+</style>
+
+<main id="bizbuild-body">
+
+  <!-- PREHEADLINE & CTA -->
+  <section id="preheadline" class="center">
+    <h1>Launch Your AI-Powered Superstore</h1>
+    <p>End-to-end eCommerce & Service funnels inside HighLevel—fully branded, conversion-optimized, and yours to manage.</p>
+    <a href="#tiers" class="cta-btn">Launch Now for $99</a>
+    <span class="tagline">High-converting AI-powered superstore</span>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features">
+    <h2 class="center">Our All-in-One Commerce Suite</h2>
+    <div class="features-grid">
+      <div class="feature">
+        <img src="ICON-STOREFRONT.svg" class="feature-icon" alt="Storefront Icon"/>
+        <h3>Conversion-Ready Storefront</h3>
+        <p>Vibrant, mobile-first storefronts with built-in upsells and persuasive CTAs.</p>
+      </div>
+      <div class="feature">
+        <img src="ICON-CATALOG.svg" class="feature-icon" alt="Catalog Icon"/>
+        <h3>Self-Managed Catalog</h3>
+        <p>Full control over SKUs, variants, pricing, and inventory—no bottlenecks.</p>
+      </div>
+      <div class="feature">
+        <img src="ICON-ENGINE.svg" class="feature-icon" alt="Engine Icon"/>
+        <div class="engine-animation"></div>
+        <h3>Automated Sales Engine</h3>
+        <p>Cart recovery, upsells, loyalty flows, and review requests—100% automated.</p>
+      </div>
+      <div class="feature">
+        <img src="ICON-CHAT.svg" class="feature-icon" alt="Chat Icon"/>
+        <div class="chat-animation"></div>
+        <h3>AI-Powered Chat & Support</h3>
+        <p>24/7 chat that answers questions, nurtures leads, and routes support seamlessly.</p>
+      </div>
+      <div class="feature">
+        <img src="ICON-PAYMENT.svg" class="feature-icon" alt="Payment Icon"/>
+        <h3>Payment Gateway Integration</h3>
+        <p>Connect Stripe or PayPal—subscriptions, trials, and one-time purchases wired in.</p>
+      </div>
     </div>
-    <div>
-      <h3>Self-Managed Product Catalog</h3>
-      <p>Clients manage SKUs, pricing, and inventory via HighLevel’s product manager. You don’t touch their catalog. They control everything—no bottlenecks, no delays.</p>
-    </div>
-    <div>
-      <h3>Automated Sales Engine</h3>
-      <p>Abandoned cart recovery (SMS + email), post-purchase upsells, loyalty flows, and review requests. Every touchpoint is automated to drive repeat purchases.</p>
-    </div>
-    <div>
-      <h3>AI-Powered Chat & Support</h3>
-      <p>24/7 AI chat that answers product questions and drives conversions. Smart routing to support or fulfillment. Optional helpdesk integration available.</p>
-    </div>
-    <div>
-      <h3>Payment Gateway Setup</h3>
-      <p>Stripe or PayPal wired inside their subaccount. You build checkout logic—they connect credentials. Subscriptions, trials, and one-offs all supported.</p>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- 💬 SECTION 3: FOLLOW-UP SYSTEM LOGIC -->
-<section id="followup-sequence" style="background:#d10000; color:#fff; padding:60px 20px;">
-  <h2 style="text-align:center;">The Core Message</h2>
-  <p style="font-style:italic; max-width:800px; margin:auto;">“We don’t just capture leads—we chase them automatically until they convert. Our follow-up system replies instantly, nurtures them with emotion-driven messaging, and keeps pushing until they book, buy, or reply. You’ll never lose a sale because someone forgot to follow up.”</p>
-
-  <h3 style="margin-top:40px;">Use Cases</h3>
-  <ul style="max-width:800px; margin:auto;">
-    <li><strong>Ecom Brand:</strong> Someone adds to cart but doesn’t buy. Our system sends a personalized SMS, drops a discount email, and follows up with urgency. You recover abandoned carts automatically.</li>
-    <li><strong>Salon/Barbershop:</strong> Someone clicks ‘Book Now’ but doesn’t finish. Our system sends a reminder text, offers a first-time discount, and nudges them to complete the booking. You get more appointments without chasing anyone.</li>
-    <li><strong>Coaches/Consultants:</strong> Someone fills out a form but doesn’t book. Our system sends a curated email, drops a voicemail, and follows up until they convert.</li>
-  </ul>
-</section>
-
-<!-- 🧠 SECTION 4: CONVERSION PSYCHOLOGY -->
-<section id="conversion-psychology" style="background:#fff; color:#000; padding:60px 20px;">
-  <h2 style="color:#d10000; text-align:center;">🔥 Conversion Psychology You Can Mention</h2>
-  <ul style="max-width:800px; margin:auto;">
-    <li><strong>Speed = Trust:</strong> Instant replies make you look professional and reliable</li>
-    <li><strong>Emotion = Action:</strong> Story-driven emails build desire and urgency</li>
-    <li><strong>Persistence = Profit:</strong> Most sales happen after the 3rd or 4th touch—our system handles that for you</li>
-  </ul>
-</section>
-
-<!-- 📦 SECTION 5: SERVICE TIERS -->
-<section id="tiers" style="background:#000; color:#fff; padding:80px 20px;">
-  <h2 style="color:#d10000; text-align:center;">📦 Choose Your Launch Tier</h2>
-
-  <!-- Tier 1 -->
-  <div style="border:2px solid #d10000; padding:30px; margin:40px auto; max-width:800px;">
-    <h3>Tier 1: DONE-WITH-YOU</h3>
-    <p><strong>$249 setup | $99/mo</strong></p>
+  <!-- GAME CHANGERS -->
+  <section id="gamechangers">
+    <h2 class="center">Game Changers for Business Owners</h2>
     <ul>
-      <li>Conversion-optimized funnel template</li>
-      <li>Fully wired automations (booking, payment, CRM)</li>
-      <li>Calendar + funnel dashboard</li>
-      <li>Self-managed product library</li>
-      <li>Stripe or PayPal checkout integration</li>
-      <li>24/7 AI-Powered Sales Assistant</li>
-      <li>Automated Sales Engine</li>
-      <li>Auto-Booking Engine</li>
+      <li>Automate 80% of sales tasks—free your time</li>
+      <li>Scale without extra headcount—AI never sleeps</li>
+      <li>Complete control of products, pricing & inventory</li>
+      <li>24/7 follow-up—never miss a single lead</li>
+      <li>Editable templates—pivot offers in minutes</li>
+      <li>Data-driven optimization—maximize ROI continuously</li>
     </ul>
-    <p><strong>Client Tasks:</strong> Select template, upload products/images/pricing, connect payment gateway</p>
-    <p><strong>BizBuild Tasks:</strong> Deploy funnel in 72 hrs, wire automations, launch—no revisions</p>
-  </div>
+  </section>
 
-  <!-- Tier 2 -->
-  <div style="border:2px solid #d10000; padding:30px; margin:40px auto; max-width:800px;">
-    <h3>Tier 2: DONE-FOR-YOU</h3>
-    <p><strong>$1,200 setup | $249/mo</strong></p>
+  <!-- USE CASES -->
+  <section id="usecases">
+    <h2 class="center">Never Miss a Sale</h2>
     <ul>
-      <li>Fully custom funnel design</li>
-      <li>Copywriting & branding optimization</li>
-      <li>Product library setup + image uploads</li>
-      <li>Monthly campaign deployment & performance tuning</li>
-      <li>Advanced AI Sales Assistant</li>
-      <li>Enhanced Sales Engine</li>
-      <li>Auto-Booking + Follow-Up Sequences</li>
-      <li>Integrated Payment Gateway</li>
+      <li>eCommerce: Recover abandoned carts with timed SMS & emails</li>
+      <li>Real Estate: Instantly text form leads, match properties, book showings</li>
+      <li>Dentists & Clinics: Send appointment reminders & new-patient offers</li>
+      <li>Salons & Spas: Auto-remind bookings, upsell add-ons, drive rebooks</li>
+      <li>Coaches & Consultants: Engage prospects via multi-channel nurture</li>
+      <li>Local Retail: Push flash sales, new arrivals, and loyalty programs</li>
     </ul>
-    <p><strong>Client Tasks:</strong> Approve design & copy, provide product details (optional), review monthly reports, connect payment gateway</p>
-    <p><strong>BizBuild Tasks:</strong> Design & build custom funnel, upload products & images, run monthly campaigns, tune AI & automation flows</p>
-  </div>
+  </section>
 
-  <!-- Tier 3 -->
-  <div style="border:2px solid #d10000; padding:30px; margin:40px auto; max-width:800px;">
-    <h3>Tier 3: PERFORMANCE PARTNER</h3>
-    <p><strong>$2,500 setup | $499/mo</strong></p>
+  <!-- WHY US -->
+  <section id="whyus">
+    <h2 class="center">Why BizBuild?</h2>
     <ul>
-      <li>Everything in Done-For-You</li>
-      <li>Weekly performance audits & A/B tests</li>
-      <li>Custom campaigns from our asset vault</li>
-      <li>Quarterly funnel rebuilds + strategic pivots</li>
-      <li>Enterprise AI Sales System</li>
-      <li>Full Funnel Optimization Engine</li>
-      <li>Advanced Booking + Follow-Up Logic</li>
-      <li>Multi-Gateway Payment Logic</li>
+      <li>Speed builds trust: Instant replies earn credibility</li>
+      <li>Emotion drives action: Story-driven messaging ignites desire</li>
+      <li>Persistence boosts profit: 75% of sales close after 3+ touches</li>
+      <li>Modular design: Swap offers or templates in minutes</li>
+      <li>AI insights: Continuous optimization for maximum ROI</li>
     </ul>
-    <p><strong>Client Tasks:</strong> Review performance reports, approve strategic pivots, provide feedback on growth goals, connect payment gateway</p>
-    <p><strong>BizBuild Tasks:</strong> Full funnel management & optimization, build & deploy custom campaigns, rebuild funnel
+  </section>
+
+  <!-- TIERS -->
+  <section id="tiers">
+    <h2 class="center" style="color: var(--white);">Choose Your Launch Package</h2>
+
+    <div class="tier-box">
+      <h3>Tier 1: Done-With-You</h3>
+      <p class="price">$249 setup | $99/mo</p>
+      <ul>
+        <li>Choose from proven funnel templates</li>
+        <li>Pre-wired automations: cart recovery, upsells, bookings</li>
+        <li>24/7 AI chat assistant on every page</li>
+        <li>Full catalog manager access</li>
+        <li>Stripe & PayPal checkout integration</li>
+      </ul>
+      <p class="small-print">You handle products & gateway—​we handle the build.</p>
+    </div>
+
+    <div class="tier-box">
+      <h3>Tier 2: Done-For-You</h3>
+      <p class="price">$1,200 setup | $249/mo</p>
+      <ul>
+        <li>Custom funnel design & brand-aligned copy</li>
+        <li>Product library setup + image uploads</li>
+        <li>Monthly campaigns & performance tuning</li>
+        <li>Advanced AI chat with smart routing</li>
+        <li>Dynamic upsell & reactivation flows</li>
+      </ul>
+      <p class="small-print">Approve design & reports—​we manage the rest.</p>
+    </div>
+
+    <div class="tier-box">
+      <h3>Tier 3: Performance Partner</h3>
+      <p class="price">$2,500 setup | $499/mo</p>
+      <ul>
+        <li>All Tier 2 features plus weekly audits & A/B tests</li>
+        <li>Quarterly funnel rebuilds & strategic pivots</li>
+        <li>Enterprise AI system: custom chat logic & routing</li>
+        <li>Inventory sync & multi-gateway orchestration</li>
+        <li>Behavior-based follow-up sequences</li>
+      </ul>
+      <p class="small-print">You set goals—​we drive scaled growth.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER CTA -->
+  <section id="footer-cta">
+    <h2 class="center">Ready to Transform Your Business?</h2>
+    <a href="#tiers" class="cta-btn">Launch Now for $99</a>
+    <p class="center" style="margin-top:15px;">High-converting AI-powered superstore</p>
+  </section>
+
+</main>
+
 
 <!-- START: Section Divider -->
 <hr
