@@ -293,34 +293,42 @@ src="https://www.facebook.com/tr?id=1089039574891097&ev=PageView&noscript=1"
     </div>
     <div class="title-group">
       <span>Not Just A Store.</span>
-      <span>Super Stores That Convert.</span>
+      <span>An AI Powered Store That Converts!</span>
     </div>
     <h2>Strategy → Traffic → Measurable ROI</h2>
   </header>
 
 
 
-  <style>
-  /* RESET & VARIABLES */
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+ <style>
   :root {
     --electric-red: #ff0033;
-    --gold: #ffd700;
     --black: #000;
     --white: #fff;
   }
-  body, main { font-family: 'Montserrat', sans-serif; background: var(--black); color: var(--white); }
-  a { text-decoration: none; }
-  section { padding: 60px 20px; background: var(--black); }
-  .center { text-align: center; }
 
-  /* HERO */
-  #hero-video {  
+  body, main {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+  }
+  a { text-decoration: none; }
+
+  .center { text-align: center; }
+  .section-white { background: var(--white); color: var(--black); }
+  .section-black { background: var(--black); color: var(--white); }
+
+  section { padding: 60px 20px; }
+
+  /* Hero */
+  #hero { }
+  #hero-video {
     width: 100%; max-width: 1200px; height: 400px;
     background: #111; margin: 0 auto 30px; border-radius: 8px;
   }
   #hero-title {
-    font-size: 3em; font-weight: 700; color: var(--white);
+    font-size: 3em; font-weight: 700;
+    color: var(--black);
   }
   .hero-tagline {
     font-size: 1em; color: var(--electric-red); margin-top: 10px;
@@ -331,92 +339,100 @@ src="https://www.facebook.com/tr?id=1089039574891097&ev=PageView&noscript=1"
     color: var(--white); border-radius: 6px; font-weight: 700;
   }
 
-  /* FEATURE CARDS */
-  .features-grid {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+  /* Features */
+  #features .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
     gap: 30px; max-width: 1000px; margin: 40px auto 0;
   }
   .feature-card {
-    border: 2px solid var(--gold); border-radius: 8px;
-    padding: 20px; text-align: left;
+    border: 2px solid var(--electric-red);
+    border-radius: 8px; padding: 20px; text-align: left;
   }
   .feature-card h3 {
-    font-size: 1.2em; color: var(--electric-red); margin-bottom: 10px;
+    font-size: 1.2em; color: var(--electric-red);
+    margin-bottom: 10px;
   }
   .feature-card p { font-size: 0.95em; }
 
-  /* GAME CHANGERS */
-  #gamechangers ul {
-    list-style: none; max-width: 800px; margin: 20px auto 0; text-align: left;
+  /* Game Changers & Never Miss */
+  ul {
+    max-width: 800px; margin: 20px auto 0; text-align: left;
+    padding-left: 20px;
   }
-  #gamechangers li {
-    margin-bottom: 10px; position: relative; padding-left: 25px;
-  }
-  #gamechangers li::before {
+  #gamechangers li::before,
+  #usecases li::before {
     content: '✔'; color: var(--electric-red);
-    position: absolute; left: 0; top: 0; font-weight: 700;
+    margin-right: 10px; font-weight: 700;
+  }
+  #usecases li { list-style: disc; }
+
+  #usecases-banner {
+    width: 100%; height: 250px; background: #222;
+    margin: 30px auto; border-radius: 8px;
   }
 
-  /* AI OVERVIEW */
-  #ai-overview { margin-top: 60px; }
-  #ai-overview h2 {
-    font-size: 2em; font-weight: 700; color: var(--electric-red); margin-bottom: 30px;
-  }
-  .ai-grid {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
-    gap: 30px; max-width: 900px; margin: 0 auto;
+  /* AI Overview */
+  #ai-overview .ai-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+    gap: 30px; max-width: 900px; margin: 40px auto 0;
   }
   .ai-card {
-    border: 2px solid var(--gold); border-radius: 8px; padding: 20px; text-align: left;
+    border: 2px solid var(--electric-red);
+    border-radius: 8px; padding: 20px; text-align: left;
   }
   .ai-card h3 {
-    font-size: 1.2em; color: var(--electric-red); margin-bottom: 10px;
+    font-size: 1.2em; color: var(--electric-red);
+    margin-bottom: 10px;
   }
   .ai-card p { font-size: 0.95em; }
 
-  /* NEVER MISS A SALE */
-  #usecases ul {
-    list-style: disc inside; max-width: 800px; margin: 20px auto 0; text-align: left;
-  }
-  #usecases-banner {
-    width: 100%; height: 250px; background: #222; margin: 30px auto; border-radius: 8px;
-  }
-
-  /* TIERS */
+  /* Tiers */
   #tiers-title {
     font-size: 2.5em; font-weight: 700;
-    background: var(--electric-red); background-clip: text; -webkit-text-fill-color: transparent;
+    background: var(--electric-red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     text-align: center; margin-bottom: 40px;
   }
   .tier-box {
-    border: 2px solid var(--gold); border-radius: 8px;
-    padding: 30px; max-width: 600px; margin: 30px auto; text-align: left;
+    background: var(--black);
+    border: 2px solid var(--electric-red);
+    border-radius: 8px; padding: 30px;
+    max-width: 600px; margin: 30px auto; text-align: left;
   }
   .tier-box h3 {
-    font-size: 1.4em; color: var(--electric-red); margin-bottom: 10px;
+    font-size: 1.4em; color: var(--electric-red);
+    margin-bottom: 10px;
   }
   .tier-box .price {
-    font-size: 1.3em; font-weight: 700; color: var(--electric-red); margin: 15px 0;
+    font-size: 1.3em; font-weight: 700;
+    color: var(--electric-red); margin: 15px 0;
   }
-  .tier-box p, .tier-box ul { color: var(--white); font-size: 0.95em; }
+  .tier-box ul { padding-left: 20px; }
+  .tier-box li { margin-bottom: 8px; }
 
-  /* FOOTER CTA */
+  /* Footer CTA */
   #footer-cta h2 {
-    font-size: 2em; font-weight: 700; color: var(--electric-red); margin-bottom: 20px;
+    font-size: 2em; font-weight: 700;
+    color: var(--electric-red); margin-bottom: 20px;
   }
 </style>
 
 <main>
-  <!-- HERO -->
-  <section id="hero" class="center">
+
+  <!-- Section: Hero Start -->
+  <section id="hero" class="section-white center">
     <div id="hero-video"></div>
     <h1 id="hero-title">We Build eCommerce Stores That Convert</h1>
     <a href="#tiers" class="btn-red">Launch Now for $99</a>
     <div class="hero-tagline">high converting AI powered superstore</div>
   </section>
+  <!-- Section: Hero End -->
 
-  <!-- FEATURES -->
-  <section id="features">
+  <!-- Section: Features Start -->
+  <section id="features" class="section-black">
     <h2 class="center">Our All-in-One Commerce Suite</h2>
     <div class="features-grid">
       <div class="feature-card">
@@ -425,7 +441,7 @@ src="https://www.facebook.com/tr?id=1089039574891097&ev=PageView&noscript=1"
       </div>
       <div class="feature-card">
         <h3>Self-Managed Catalog</h3>
-        <p>Clients control SKUs, variants and inventory—no bottlenecks, no back-and-forth.</p>
+        <p>Full control over SKUs, variants and inventory—no bottlenecks.</p>
       </div>
       <div class="feature-card">
         <h3>Automated Sales Engine</h3>
@@ -433,49 +449,52 @@ src="https://www.facebook.com/tr?id=1089039574891097&ev=PageView&noscript=1"
       </div>
       <div class="feature-card">
         <h3>AI-Powered Support</h3>
-        <p>24/7 chat across site, email, SMS and social—with smart routing for real humans.</p>
+        <p>24/7 chat across site, email, SMS and social—with smart routing to your team.</p>
       </div>
       <div class="feature-card">
         <h3>Payment Gateway Setup</h3>
-        <p>Stripe, PayPal and subscription checkout integrated in minutes—not days.</p>
+        <p>Stripe, PayPal and subscription checkout integrated in minutes.</p>
       </div>
     </div>
   </section>
+  <!-- Section: Features End -->
 
-  <!-- GAME CHANGERS -->
-  <section id="gamechangers">
+  <!-- Section: Game Changers Start -->
+  <section id="gamechangers" class="section-white">
     <h2 class="center">Game Changers for Business Owners</h2>
     <ul>
       <li>Automate 80% of sales tasks—free up your calendar</li>
       <li>Scale instantly—no extra headcount needed</li>
       <li>Full product & pricing control in one dashboard</li>
-      <li>24/7 follow-up—never lose a single lead</li>
+      <li>24/7 follow-up—never miss a single lead</li>
       <li>Swap templates in seconds—pivot on a dime</li>
       <li>Data-driven optimizations for max ROI</li>
     </ul>
   </section>
+  <!-- Section: Game Changers End -->
 
-  <!-- AI OVERVIEW -->
-  <section id="ai-overview">
-    <h2 class="center">AI-Powered Qualifying, Bookings & Support</h2>
+  <!-- Section: AI Overview Start -->
+  <section id="ai-overview" class="section-black">
+    <h2 class="center">Smart AI for Qualifying, Fulfillment & Upsell</h2>
     <div class="ai-grid">
       <div class="ai-card">
         <h3>AI Voice Agents</h3>
-        <p>AI becomes your brand’s voice—outbound & inbound calls, texts, email and social DMs.</p>
+        <p>AI speaks for your brand—handles calls, texts, emails and social DMs.</p>
       </div>
       <div class="ai-card">
         <h3>AI Inquiry Qualifying</h3>
-        <p>Intelligent bots vet every customer question, guiding them to the right product or service.</p>
+        <p>Bots vet every customer question, guiding them to the right product or service.</p>
       </div>
       <div class="ai-card">
         <h3>AI Order Management</h3>
-        <p>End missed orders, double-booking or lost appointments with automated tracking & alerts.</p>
+        <p>Prevent lost orders and double-bookings with automated tracking & alerts.</p>
       </div>
     </div>
   </section>
+  <!-- Section: AI Overview End -->
 
-  <!-- NEVER MISS A SALE -->
-  <section id="usecases">
+  <!-- Section: Never Miss a Sale Start -->
+  <section id="usecases" class="section-white">
     <h2 class="center">Never Miss a Sale</h2>
     <div id="usecases-banner"></div>
     <ul>
@@ -487,9 +506,23 @@ src="https://www.facebook.com/tr?id=1089039574891097&ev=PageView&noscript=1"
       <li>Health & Wellness: automate intake forms and booking confirmations</li>
     </ul>
   </section>
+  <!-- Section: Never Miss a Sale End -->
 
-  <!-- TIERS -->
-  <section id="tiers">
+  <!-- Section: Why BizBuild Start -->
+  <section id="whyus" class="section-black">
+    <h2 class="center">Why BizBuild?</h2>
+    <ul>
+      <li>Instant responses build trust at first touch</li>
+      <li>Emotion-driven messaging ignites desire</li>
+      <li>Persistence captures 75% of sales after 3+ touches</li>
+      <li>Modular templates let you pivot in minutes</li>
+      <li>AI insights drive continuous ROI growth</li>
+    </ul>
+  </section>
+  <!-- Section: Why BizBuild End -->
+
+  <!-- Section: Tiers Start -->
+  <section id="tiers" class="section-white">
     <h2 id="tiers-title">Choose Your Launch Package</h2>
 
     <div class="tier-box">
@@ -498,7 +531,7 @@ src="https://www.facebook.com/tr?id=1089039574891097&ev=PageView&noscript=1"
       <ul>
         <li>Pick from proven funnel templates</li>
         <li>Pre-wired automations: cart recovery & upsells</li>
-        <li>24/7 AI support chat</li>
+        <li>24/7 AI chat support</li>
         <li>Full catalog manager access</li>
         <li>Stripe & PayPal setup</li>
       </ul>
@@ -528,12 +561,15 @@ src="https://www.facebook.com/tr?id=1089039574891097&ev=PageView&noscript=1"
       </ul>
     </div>
   </section>
+  <!-- Section: Tiers End -->
 
-  <!-- FOOTER CTA -->
-  <section id="footer-cta" class="center">
+  <!-- Section: Footer CTA Start -->
+  <section id="footer-cta" class="section-black center">
     <h2>Ready to Transform Your Business?</h2>
     <a href="#tiers" class="btn-red">Launch Now for $99</a>
   </section>
+  <!-- Section: Footer CTA End -->
+
 </main>
 
 
