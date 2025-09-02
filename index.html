@@ -301,296 +301,515 @@ src="https://www.facebook.com/tr?id=1089039574891097&ev=PageView&noscript=1"
 
 
 
-<style>
-  :root {
-    --electric-red: #ff0033;
-    --black: #000;
-    --white: #fff;
-    --gold: #FFD700;
-  }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BizBuild AI-Powered eCommerce</title>
+  <style>
+    :root {
+      --electric-red: #ff0033;
+      --black: #000;
+      --white: #fff;
+      --gold: #FFD700;
+    }
 
-  /* Global Resets & Layout */
-  *, *::before, *::after {
-    box-sizing: border-box;
-  }
-  body, main {
-    margin: 0 auto;
-    padding: 0;
-    max-width: 1200px;
-    background: var(--black);
-    font-family: 'Montserrat', sans-serif;
-    color: var(--white);
-    overflow-x: hidden;
-  }
-  section {
-    padding: 40px 20px;          /* Reduced top/bottom padding */
-    margin-bottom: 40px;
-  }
-  .center {
-    text-align: center;
-  }
-  a { text-decoration: none; }
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-  /* Hero */
-  #hero {
-    background: var(--white);
-    color: var(--black);
-    border-radius: 8px;
-    padding: 40px 20px;
-  }
-  #hero h1,
-  #hero .btn-red,
-  #hero .hero-tagline {
-    display: block;
-    margin: 0 auto 10px;
-  }
-  #hero h1 {
-    font-size: 3em;
-    font-weight: 700;
-    margin-bottom: 20px;
-  }
-  #hero .btn-red {
-    padding: 15px 30px;
-    background: var(--electric-red);
-    color: var(--white);
-    border-radius: 6px;
-    font-weight: 700;
-  }
-  #hero .hero-tagline {
-    font-size: 1em;
-    color: var(--electric-red);
-  }
+    html, body {
+      width: 100%;
+      background: var(--black);
+      color: var(--white);
+      font-family: 'Montserrat', sans-serif;
+    }
 
-  /* Sections */
-  .section-white-box {
-    background: var(--white);
-    color: var(--black);
-    border-radius: 8px;
-    text-align: left;
-  }
-  .section-black-full {
-    background: var(--black);
-    color: var(--white);
-  }
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
 
-  /* Game Changers & Use Cases Lists */
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: 20px 0;
-  }
-  #gamechangers li,
-  #usecases li {
-    display: flex;
-    align-items: center;
-    margin-bottom: 12px;
-  }
-  #gamechangers li::before,
-  #usecases li::before {
-    content: '✔';
-    color: var(--electric-red);
-    min-width: 1.5em;
-    text-align: center;
-    font-weight: 700;
-    margin-right: 10px;
-  }
+    section {
+      padding: 20px 20px;          /* Reduced vertical padding */
+      margin-bottom: 30px;
+    }
 
-  /* New BizBuild-All Section */
-  #bizbuild-all h2 {
-    font-size: 2.5em;
-    font-weight: 700;
-    color: var(--black);
-    margin-bottom: 30px;
-    text-align: center;
-  }
-  .widgets {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 40px;
-  }
-  .widget {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    animation: float 4s ease-in-out infinite;
-  }
-  .widget img {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 10px;
-    filter: drop-shadow(0 0 8px var(--electric-red));
-    animation: glow 2s infinite alternate;
-  }
-  .widget span {
-    color: var(--black);
-    font-weight: 700;
-  }
+    h1, h2, h3 {
+      font-family: 'Montserrat', sans-serif;  /* Header font */
+      font-weight: 700;
+    }
 
-  @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-  }
-  @keyframes glow {
-    from { filter: drop-shadow(0 0 4px var(--electric-red)); }
-    to   { filter: drop-shadow(0 0 16px var(--electric-red)); }
-  }
-</style>
+    /* Center all section headers */
+    section h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
 
-<main>
+    .center {
+      text-align: center;
+    }
 
-  <!-- Hero -->
-  <section id="hero" class="center">
-    <h1>We Build eCommerce Stores That Convert</h1>
-    <a href="#tiers" class="btn-red">Launch Now for $99</a>
-    <div class="hero-tagline">high converting AI powered superstore</div>
-  </section>
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
-  <!-- Features, Marketing Engine, Smart AI (unchanged) -->
+    /* Hero */
+    #hero {
+      background: var(--white);
+      color: var(--black);
+      border-radius: 8px;
+    }
 
-  <!-- Game Changers -->
-  <section id="gamechangers" class="section-white-box">
-    <h2 class="center">Game Changers for Business Owners</h2>
-    <ul>
-      <li>Automate 80% of sales tasks—free up your calendar</li>
-      <li>Scale instantly—no extra headcount needed</li>
-      <li>Full product & pricing control in one dashboard</li>
-      <li>24/7 follow-up—never miss a single lead</li>
-      <li>Swap templates in seconds—pivot on a dime</li>
-      <li>Data-driven optimizations for max ROI</li>
-    </ul>
-  </section>
+    #hero h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
 
-  <!-- Never Miss a Sale -->
-  <section id="usecases" class="section-black-full center">
-    <h2>Never Miss a Sale</h2>
-    <div id="usecases-banner"></div>
-    <ul>
-      <li>eCommerce: recover abandoned carts via timed SMS & email</li>
-      <li>Local Services: auto-schedule appointments and send reminders</li>
-      <li>Memberships: upsell renewals with personalized follow-up flows</li>
-      <li>Consulting: nurture leads via multi-channel touchpoints</li>
-      <li>Retail: flash-sale alerts with geo-targeted push messages</li>
-      <li>Health & Wellness: automate intake forms and booking confirmations</li>
-    </ul>
-  </section>
+    #hero .btn-red {
+      display: inline-block;
+      padding: 15px 30px;
+      background: var(--electric-red);
+      color: var(--white);
+      border-radius: 6px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
 
-  <!-- BizBuild-All Section -->
-  <section id="bizbuild-all" class="section-white-box">
-    <h2>BizBuild has everything your business needs to succeed</h2>
-    <div class="widgets">
-      <div class="widget">
-        <img src="path/to/icon-crm.svg" alt="CRM icon">
-        <span>CRM</span>
+    #hero .hero-tagline {
+      font-size: 1em;
+      color: var(--electric-red);
+    }
+
+    /* Section variants */
+    .section-white-box {
+      background: var(--white);
+      color: var(--black);
+      border-radius: 8px;
+    }
+
+    .section-black-full {
+      background: var(--black);
+      color: var(--white);
+    }
+
+    /* Generic list with centered checkmarks */
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 20px;
+    }
+
+    .section-white-box ul,
+    .section-black-full ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .section-white-box li,
+    .section-black-full li {
+      display: flex;
+      justify-content: center;  /* center icon + text */
+      align-items: center;
+      margin-bottom: 12px;
+    }
+
+    .section-white-box li::before,
+    .section-black-full li::before {
+      content: '✔';
+      color: var(--electric-red);
+      min-width: 1.5em;
+      text-align: center;
+      margin-right: 10px;
+      font-weight: 700;
+    }
+
+    /* Features grid */
+    .features-grid,
+    .ai-grid {
+      display: grid;
+      gap: 30px;
+      margin-top: 20px;
+    }
+
+    .features-grid {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    .feature-card,
+    .ai-card {
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    .feature-card {
+      background: var(--black);
+      border: 2px solid var(--electric-red);
+    }
+
+    .feature-card h3 {
+      color: var(--electric-red);
+      margin-bottom: 10px;
+    }
+
+    .ai-card {
+      background: var(--white);
+      color: var(--black);
+      border: 2px solid var(--electric-red);
+      text-align: left;
+    }
+
+    .ai-card h3 {
+      color: var(--electric-red);
+      margin-bottom: 10px;
+    }
+
+    .ai-card img {
+      width: 100%;
+      border-radius: 6px;
+      margin-top: 10px;
+    }
+
+    /* BizBuild-All widgets */
+    #bizbuild-all .widgets {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    #bizbuild-all .widget {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      animation: float 4s ease-in-out infinite;
+    }
+
+    #bizbuild-all .widget img {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 8px;
+      filter: drop-shadow(0 0 8px var(--electric-red));
+      animation: glow 2s infinite alternate;
+    }
+
+    #bizbuild-all .widget span {
+      color: var(--black);
+      font-weight: 700;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50%      { transform: translateY(-10px); }
+    }
+
+    @keyframes glow {
+      from { filter: drop-shadow(0 0 4px var(--electric-red)); }
+      to   { filter: drop-shadow(0 0 16px var(--electric-red)); }
+    }
+
+    /* FAQ styling */
+    #faqs dl {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    #faqs dt {
+      font-weight: 700;
+      margin-top: 20px;
+    }
+
+    #faqs dd {
+      margin-left: 1em;
+      margin-bottom: 12px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+
+    <!-- Hero -->
+    <section id="hero" class="center section-white-box">
+      <h1>We Build eCommerce Stores That Convert</h1>
+      <a href="#tiers" class="btn-red">Launch Now for $99</a>
+      <div class="hero-tagline">high converting AI powered superstore</div>
+    </section>
+
+    <!-- Our All-in-One Commerce Suite -->
+    <section id="features" class="section-black-full">
+      <h2>Our All-in-One Commerce Suite</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <h3>Conversion-Ready Storefront</h3>
+          <p>Mobile-first designs with upsells, cross-sells and persuasive CTAs baked in.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Self-Managed Catalog</h3>
+          <p>Full control over SKUs, variants and inventory—no bottlenecks.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Automated Sales Engine</h3>
+          <p>Abandoned-cart recovery, post-purchase offers and loyalty triggers on autopilot.</p>
+        </div>
+        <div class="feature-card">
+          <h3>AI-Powered Support</h3>
+          <p>24/7 chat across site, email, SMS and social—with smart routing to your team.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Payment Gateway Setup</h3>
+          <p>Stripe, PayPal and subscription checkout integrated in minutes.</p>
+        </div>
       </div>
-      <div class="widget">
-        <img src="path/to/icon-sms.svg" alt="SMS icon">
-        <span>SMS</span>
-      </div>
-      <div class="widget">
-        <img src="path/to/icon-email.svg" alt="Email icon">
-        <span>Email</span>
-      </div>
-      <div class="widget">
-        <img src="path/to/icon-followup.svg" alt="Follow up icon">
-        <span>Follow Up</span>
-      </div>
-      <div class="widget">
-        <img src="path/to/icon-automations.svg" alt="Automations icon">
-        <span>Automations</span>
-      </div>
-      <div class="widget">
-        <img src="path/to/icon-landing.svg" alt="Landing pages icon">
-        <span>Landing Pages</span>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Tiers -->
-  <section id="tiers" class="section-black-full">
-    <div class="tier-wrapper">
+    <!-- All-in-One Marketing Engine -->
+    <section id="marketing-engine" class="section-white-box">
+      <h2>All-in-One Marketing Engine</h2>
+      <div class="ai-grid" style="grid-template-columns: repeat(auto-fit,minmax(260px,1fr));">
+        <div class="ai-card">
+          <h3>Consolidate Your Subscriptions</h3>
+          <p>Unify your CRM, dialer, mass-texting, lead data, automations and VAs under one $99 plan.</p>
+          <img src="https://via.placeholder.com/300x150" alt="Consolidate Subscriptions">
+        </div>
+        <div class="ai-card">
+          <h3>24/7 AI Assistant</h3>
+          <p>Our AI voice agent qualifies leads, schedules appointments, and handles follow-ups so you can close.</p>
+          <img src="https://via.placeholder.com/300x150" alt="AI Assistant">
+        </div>
+        <div class="ai-card">
+          <h3>Built by Investment Pros</h3>
+          <p>Designed by dealmakers for closers—thousands use this platform daily to outperform competitors.</p>
+          <img src="https://via.placeholder.com/300x150" alt="Built by Pros">
+        </div>
+      </div>
+    </section>
+
+    <!-- Smart AI for Qualifying, Fulfillment & Upsell -->
+    <section id="ai-overview" class="section-black-full">
+      <h2>Smart AI for Qualifying, Fulfillment & Upsell</h2>
+      <div class="ai-grid" style="grid-template-columns: repeat(auto-fit,minmax(260px,1fr));">
+        <div class="ai-card">
+          <h3>AI Voice Agents</h3>
+          <p>AI speaks for your brand—handles calls, texts, emails and social DMs.</p>
+          <img src="https://via.placeholder.com/300x150" alt="AI Voice Agents">
+        </div>
+        <div class="ai-card">
+          <h3>AI Inquiry Qualifying</h3>
+          <p>Bots vet every customer question, guiding them to the right product or service.</p>
+          <img src="https://via.placeholder.com/300x150" alt="AI Inquiry Qualifying">
+        </div>
+        <div class="ai-card">
+          <h3>AI Order Management</h3>
+          <p>Prevent lost orders and double-bookings with automated tracking & alerts.</p>
+          <img src="https://via.placeholder.com/300x150" alt="AI Order Management">
+        </div>
+      </div>
+    </section>
+
+    <!-- Game Changers for Business Owners -->
+    <section id="gamechangers" class="section-white-box">
+      <h2>Game Changers for Business Owners</h2>
+      <ul>
+        <li>Automate 80% of sales tasks—free up your calendar</li>
+        <li>Scale instantly—no extra headcount needed</li>
+        <li>Full product & pricing control in one dashboard</li>
+        <li>24/7 follow-up—never miss a single lead</li>
+        <li>Swap templates in seconds—pivot on a dime</li>
+        <li>Data-driven optimizations for max ROI</li>
+      </ul>
+    </section>
+
+    <!-- Never Miss a Sale -->
+    <section id="usecases" class="section-black-full">
+      <h2>Never Miss a Sale</h2>
+      <div id="usecases-banner" style="height:200px; background:#222; border-radius:8px; margin:0 auto 20px;"></div>
+      <ul>
+        <li>eCommerce: recover abandoned carts via timed SMS & email</li>
+        <li>Local Services: auto-schedule appointments and send reminders</li>
+        <li>Memberships: upsell renewals with personalized follow-up flows</li>
+        <li>Consulting: nurture leads via multi-channel touchpoints</li>
+        <li>Retail: flash-sale alerts with geo-targeted push messages</li>
+        <li>Health & Wellness: automate intake forms and booking confirmations</li>
+      </ul>
+    </section>
+
+    <!-- BizBuild-All Section -->
+    <section id="bizbuild-all" class="section-white-box">
+      <h2>BizBuild has everything your business needs to succeed</h2>
+      <div class="widgets">
+        <div class="widget">
+          <img src="path/to/icon-crm.svg" alt="CRM icon"/>
+          <span>CRM</span>
+        </div>
+        <div class="widget">
+          <img src="path/to/icon-sms.svg" alt="SMS icon"/>
+          <span>SMS</span>
+        </div>
+        <div class="widget">
+          <img src="path/to/icon-email.svg" alt="Email icon"/>
+          <span>Email</span>
+        </div>
+        <div class="widget">
+          <img src="path/to/icon-followup.svg" alt="Follow up icon"/>
+          <span>Follow Up</span>
+        </div>
+        <div class="widget">
+          <img src="path/to/icon-automations.svg" alt="Automations icon"/>
+          <span>Automations</span>
+        </div>
+        <div class="widget">
+          <img src="path/to/icon-landing.svg" alt="Landing pages icon"/>
+          <span>Landing Pages</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Tiers -->
+    <section id="tiers" class="section-black-full">
       <h2>Choose Your Launch Package</h2>
-
-      <div class="tier-box">
-        <h3>TIER 1: DONE-WITH-YOU</h3>
-        <p>Launch-ready funnel in 72 hours. You pick the template. We wire the automations. No revisions. Just results.</p>
-        <div class="price">$249 setup | $99/mo</div>
-        <ul>
-          <li>Conversion-optimized funnel template</li>
-          <li>Fully wired automations (booking, payment, CRM)</li>
-          <li>Calendar + funnel dashboard</li>
-          <li>Self-managed product library (images, pricing, inventory)</li>
-          <li>Stripe or PayPal checkout integration</li>
-          <li>24/7 AI-Powered Sales Assistant
-            <span>• Answers product/service questions instantly—even at 2 AM</span>
-            <span>• Converts browsers into buyers via smart chat logic</span>
-          </li>
-          <li>Automated Sales Engine
-            <span>• Abandoned-cart recovery (SMS + email)</span>
-            <span>• Post-purchase upsells & cross-sells</span>
-            <span>• Loyalty flows & repeat-purchase triggers</span>
-            <span>• Review-request automations</span>
-          </li>
-          <li>Auto-Booking Engine (services)
-            <span>• Appointments auto-booked—no manual scheduling</span>
-          </li>
-        </ul>
+      <div class="tier-wrapper" style="border:2px solid var(--gold); border-radius:8px; padding:20px; max-width:1000px; margin:0 auto;">
+        <!-- Tier 1 -->
+        <div class="tier-box" style="background:var(--black); border:2px solid var(--electric-red); border-radius:8px; padding:20px; margin-bottom:20px;">
+          <h3>TIER 1: DONE-WITH-YOU</h3>
+          <p>Launch-ready funnel in 72 hours. You pick the template. We wire the automations. No revisions. Just results.</p>
+          <div class="price" style="color:var(--gold); font-weight:700; margin:15px 0;">$249 setup | $99/mo</div>
+          <ul style="padding-left:20px; text-align:left;">
+            <li>Conversion-optimized funnel template</li>
+            <li>Fully wired automations (booking, payment, CRM)</li>
+            <li>Calendar + funnel dashboard</li>
+            <li>Self-managed product library (images, pricing, inventory)</li>
+            <li>Stripe or PayPal checkout integration</li>
+            <li>24/7 AI-Powered Sales Assistant
+              <ul style="margin-top:10px; padding-left:20px;">
+                <li>Answers product/service questions instantly—even at 2 AM</li>
+                <li>Converts browsers into buyers via smart chat logic</li>
+              </ul>
+            </li>
+            <li>Automated Sales Engine
+              <ul style="margin-top:10px; padding-left:20px;">
+                <li>Abandoned-cart recovery (SMS + email)</li>
+                <li>Post-purchase upsells & cross-sells</li>
+                <li>Loyalty flows & repeat-purchase triggers</li>
+                <li>Review-request automations</li>
+              </ul>
+            </li>
+            <li>Auto-Booking Engine (services)
+              <ul style="margin-top:10px; padding-left:20px;">
+                <li>Appointments auto-booked—no manual scheduling</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <!-- Tier 2 -->
+        <div class="tier-box" style="background:var(--black); border:2px solid var(--electric-red); border-radius:8px; padding:20px; margin-bottom:20px;">
+          <h3>TIER 2: DONE-FOR-YOU</h3>
+          <div class="price" style="color:var(--gold); font-weight:700; margin:15px 0;">$999 setup | $99/mo</div>
+          <ul style="padding-left:20px; text-align:left;">
+            <li>Fully custom funnel design</li>
+            <li>Copywriting & branding optimization</li>
+            <li>Product library setup + image uploads</li>
+            <li>Monthly campaign deployment & performance tuning</li>
+            <li>Advanced AI Sales Assistant
+              <ul style="margin-top:10px; padding-left:20px;">
+                <li>Smart routing to support, fulfillment, or sales</li>
+                <li>Optional helpdesk/ticketing integration</li>
+              </ul>
+            </li>
+            <li>Enhanced Sales Engine
+              <ul style="margin-top:10px; padding-left:20px;">
+                <li>Loyalty triggers & reactivation flows</li>
+                <li>Dynamic upsell logic</li>
+              </ul>
+            </li>
+            <li>Auto-Booking + Follow-Up Sequences
+              <ul style="margin-top:10px; padding-left:20px;">
+                <li>Cold leads warmed with emotionally intelligent nurture</li>
+              </ul>
+            </li>
+            <li>Integrated Payment Gateway
+              <ul style="margin-top:10px; padding-left:20px;">
+                <li>Subscriptions, trials & one-offs wired</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <!-- Tier 3 -->
+        <div class="tier-box" style="background:var(--black); border:2px solid var(--electric-red); border-radius:8px; padding:20px;">
+          <h3>TIER 3: PERFORMANCE PARTNER</h3>
+          <div class="price" style="color:var(--gold); font-weight:700; margin:15px 0;">$4,999 setup | $199/mo</div>
+          <ul style="padding-left:20px; text-align:left;">
+            <li>Everything in Done-For-You, plus:</li>
+            <li>Weekly performance audits & A/B tests</li>
+            <li>Custom campaigns from our asset vault</li>
+            <li>Quarterly funnel rebuilds + strategic pivots</li>
+            <li>Enterprise AI Sales System
+              <ul style="margin-top:10px; padding-left:20px;">
+                <li>Bespoke chat—custom logic & multi-channel routing</li>
+                <li>Fulfillment triggers & support handoffs</li>
+              </ul>
+            </li>
+            <li>Full Funnel Optimization Engine
+              <ul style="margin-top:10px; padding-left:20px;">
+                <li>Multi-variant product logic</li>
+                <li>Inventory syncing & upsell testing</li>
+              </ul>
+            </li>
+            <li>Advanced Booking + Follow-Up Logic
+              <ul style="margin-top:10px; padding-left:20px;">
+                <li>Personalized sequences based on behavior & funnel stage</li>
+              </ul>
+            </li>
+            <li>Multi-Gateway Payment Logic
+              <ul style="margin-top:10px; padding-left:20px;">
+                <li>Stripe + PayPal + optional add-ons wired for scale</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
       </div>
+    </section>
 
-      <div class="tier-box">
-        <h3>TIER 2: DONE-FOR-YOU</h3>
-        <div class="price">$999 setup | $99/mo</div>
-        <ul>
-          <li>Fully custom funnel design</li>
-          <li>Copywriting & branding optimization</li>
-          <li>Product library setup + image uploads</li>
-          <li>Monthly campaign deployment & performance tuning</li>
-          <li>Advanced AI Sales Assistant
-            <span>• Smart routing to support, fulfillment, or sales</span>
-            <span>• Optional helpdesk/ticketing integration</span>
-          </li>
-          <li>Enhanced Sales Engine
-            <span>• Loyalty triggers & reactivation flows</span>
-            <span>• Dynamic upsell logic</span>
-          </li>
-          <li>Auto-Booking + Follow-Up Sequences
-            <span>• Cold leads warmed with emotionally intelligent nurture</span>
-          </li>
-          <li>Integrated Payment Gateway
-            <span>• Subscriptions, trials & one-offs wired</span>
-          </li>
-        </ul>
-      </div>
+    <!-- Social Proof & Stats -->
+    <section id="stats" class="section-black-full">
+      <ul>
+        <li>We’ve helped 380+ businesses across the globe</li>
+        <li>Enrolled over 60,000+ students in our ads course</li>
+        <li>Our ad strategies help you resonate with your audience while delivering measurable growth</li>
+        <li>We use data-backed creative approaches to elevate performance across platforms</li>
+        <li>You gain automated systems that scale impact without draining resources</li>
+        <li>Every campaign reflects regional nuance so you stand out in any market</li>
+        <li>Our clients consistently outperform larger agencies with leaner budgets</li>
+      </ul>
+    </section>
 
-      <div class="tier-box">
-        <h3>TIER 3: PERFORMANCE PARTNER</h3>
-        <div class="price">$4,999 setup | $199/mo</div>
-        <ul>
-          <li>Everything in Done-For-You, plus:</li>
-          <li>Weekly performance audits & A/B tests</li>
-          <li>Custom campaigns from our asset vault</li>
-          <li>Quarterly funnel rebuilds + strategic pivots</li>
-          <li>Enterprise AI Sales System
-            <span>• Bespoke chat—custom logic & multi-channel routing</span>
-            <span>• Fulfillment triggers & support handoffs</span>
-          </li>
-          <li>Full Funnel Optimization Engine
-            <span>• Multi-variant product logic</span>
-            <span>• Inventory syncing & upsell testing</span>
-          </li>
-          <li>Advanced Booking + Follow-Up Logic
-            <span>• Personalized sequences based on behavior & funnel stage</span>
-          </li>
-          <li>Multi-Gateway Payment Logic
-            <span>• Stripe + PayPal + optional add-ons wired for scale</span>
-          </li>
-        </ul>
-      </div>
+    <!-- FAQ -->
+    <section id="faqs" class="section-white-box">
+      <h2>Frequently Asked Questions</h2>
+      <dl>
+        <dt>What’s included in the Level 1 Conversion Tune-Up?</dt>
+        <dd>Conversion-ready funnel template, automations wiring, dashboard setup.</dd>
+        <dt>What does the Conversion Rebuild & Launch Suite include?</dt>
+        <dd>Full funnel redesign, copy & branding, product library setup and automations.</dd>
+        <dt>What’s in the VIP Conversion Command Package?</dt>
+        <dd>Weekly audits, A/B tests, custom campaigns, and strategic pivots.</dd>
+        <dt>Do I need prior experience to work with you?</dt>
+        <dd>No, our systems are plug-and-play—no coding required.</dd>
+        <dt>How quickly will I see improvements?</dt>
+        <dd>Most clients see measurable lifts within the first week of go-live.</dd>
+        <dt>What if I don’t see an increase in traffic or leads?</dt>
+        <dd>We’ll audit and adjust your campaigns at no extra charge for the first 30 days.</dd>
+        <dt>How do I book my live strategy session?</dt>
+        <dd>Click “Launch Now for $99” and choose your preferred time slot.</dd>
+      </dl>
+    </section>
+  </main>
 
-    </div>
-  </section>
 
-</main>
 
 
 
