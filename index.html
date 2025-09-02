@@ -319,31 +319,26 @@ src="https://www.facebook.com/tr?id=1089039574891097&ev=PageView&noscript=1"
   .center { text-align: center; }
   section { padding: 60px 20px; }
 
-  /* boxed white sections */
+  /* White boxed sections */
   .section-white-box {
     background: var(--white);
     color: var(--black);
-    margin: 0 auto;
     max-width: 1000px;
+    margin: 0 auto;
     border-radius: 8px;
     padding: 60px 20px;
-    text-align: left;
   }
 
-  /* full‐width black sections */
+  /* Full-width black sections */
   .section-black-full {
     background: var(--black);
     color: var(--white);
-    margin: 0 auto;
-    max-width: 1000px;
-    border-radius: 8px;
-    padding: 60px 20px;
-    text-align: left;
   }
 
   /* Hero */
   #hero-video {
-    width: 100%; height: 400px;
+    width: 100%;
+    height: 400px;
     background: #111;
     border-radius: 8px;
     margin-bottom: 30px;
@@ -351,7 +346,6 @@ src="https://www.facebook.com/tr?id=1089039574891097&ev=PageView&noscript=1"
   #hero-title {
     font-size: 3em;
     font-weight: 700;
-    color: var(--black);
     margin: 0;
   }
   .hero-tagline {
@@ -384,7 +378,6 @@ src="https://www.facebook.com/tr?id=1089039574891097&ev=PageView&noscript=1"
     border: 2px solid var(--electric-red);
     border-radius: 8px;
     padding: 20px;
-    text-align: left;
   }
   .feature-card h3 {
     color: var(--electric-red);
@@ -393,15 +386,12 @@ src="https://www.facebook.com/tr?id=1089039574891097&ev=PageView&noscript=1"
 
   /* Game Changers */
   #gamechangers h2 {
-    color: var(--black);
     font-size: 2em;
     margin-bottom: 0.5em;
-    text-align: center;
   }
   #gamechangers ul {
     list-style: none;
     padding-left: 20px;
-    text-align: left;
   }
   #gamechangers li {
     margin-bottom: 10px;
@@ -413,7 +403,15 @@ src="https://www.facebook.com/tr?id=1089039574891097&ev=PageView&noscript=1"
     font-weight: 700;
   }
 
-  /* Smart AI */
+  /* Marketing Engine */
+  #marketing-engine h2 {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: var(--electric-red);
+    margin-bottom: 0.5em;
+  }
+
+  /* AI Cards */
   .ai-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
@@ -424,8 +422,6 @@ src="https://www.facebook.com/tr?id=1089039574891097&ev=PageView&noscript=1"
     border: 2px solid var(--electric-red);
     border-radius: 8px;
     padding: 20px;
-    text-align: left;
-    margin-bottom: 40px;
   }
   .ai-card h3 {
     color: var(--electric-red);
@@ -434,39 +430,23 @@ src="https://www.facebook.com/tr?id=1089039574891097&ev=PageView&noscript=1"
   .ai-card img {
     width: 100%;
     height: auto;
-    margin-top: 20px;
+    margin-top: 15px;
     border-radius: 6px;
   }
 
-  /* All-in-One Marketing Engine */
-  #marketing-engine h2 {
-    font-size: 2.5em;
-    font-weight: 700;
-    color: var(--electric-red);
-    text-align: center;
-    margin-bottom: 0.5em;
-  }
-
   /* Never Miss a Sale */
-  #usecases {
-    background: var(--black);
-    color: var(--white);
-  }
   #usecases h2 {
-    color: var(--electric-red);
     font-size: 2.5em;
     font-weight: 700;
-    text-align: center;
+    color: var(--electric-red);
     margin-bottom: 0.5em;
   }
   #usecases ul {
     list-style: none;
     padding-left: 20px;
-    text-align: left;
   }
   #usecases li {
     margin-bottom: 10px;
-    color: var(--white);
   }
   #usecases li::before {
     content: '✔';
@@ -474,25 +454,16 @@ src="https://www.facebook.com/tr?id=1089039574891097&ev=PageView&noscript=1"
     margin-right: 10px;
     font-weight: 700;
   }
-  #usecases-banner {
-    width: 100%;
-    height: 250px;
-    background: #222;
-    border-radius: 8px;
-    margin: 20px auto;
-  }
 
   /* Why BizBuild */
   #whyus h2 {
     font-size: 2em;
     text-transform: capitalize;
     margin-bottom: 0.5em;
-    text-align: center;
   }
   #whyus ul {
     list-style: none;
     padding-left: 20px;
-    text-align: left;
   }
   #whyus li {
     margin-bottom: 10px;
@@ -506,13 +477,18 @@ src="https://www.facebook.com/tr?id=1089039574891097&ev=PageView&noscript=1"
 
   /* Tiers */
   #tiers {
-    border: 1px solid var(--gold);
+    max-width: 1000px;
+    margin: 0 auto;
   }
-  #tiers-title {
-    color: var(--electric-red);
+  #tiers .tier-wrapper {
+    border: 1px solid var(--gold);
+    border-radius: 8px;
+    padding: 40px 20px;
+  }
+  #tiers h2 {
     font-size: 2.5em;
     font-weight: 700;
-    text-align: center;
+    color: var(--electric-red);
     margin-bottom: 40px;
   }
   .tier-box {
@@ -522,7 +498,6 @@ src="https://www.facebook.com/tr?id=1089039574891097&ev=PageView&noscript=1"
     padding: 30px;
     max-width: 600px;
     margin: 30px auto;
-    text-align: left;
   }
   .tier-box h3 {
     color: var(--electric-red);
@@ -537,7 +512,6 @@ src="https://www.facebook.com/tr?id=1089039574891097&ev=PageView&noscript=1"
   }
   .tier-box ul {
     padding-left: 20px;
-    text-align: left;
   }
   .tier-box li {
     margin-bottom: 8px;
@@ -552,7 +526,6 @@ src="https://www.facebook.com/tr?id=1089039574891097&ev=PageView&noscript=1"
 
   /* Footer CTA */
   #footer-cta h2 {
-    color: var(--electric-red);
     font-size: 2em;
     font-weight: 700;
     margin-bottom: 20px;
@@ -560,7 +533,6 @@ src="https://www.facebook.com/tr?id=1089039574891097&ev=PageView&noscript=1"
 </style>
 
 <main>
-
   <!-- Hero -->
   <section id="hero" class="section-white-box center">
     <div id="hero-video"></div>
@@ -598,7 +570,7 @@ src="https://www.facebook.com/tr?id=1089039574891097&ev=PageView&noscript=1"
 
   <!-- Game Changers -->
   <section id="gamechangers" class="section-white-box">
-    <h2>Game Changers for Business Owners</h2>
+    <h2 class="center">Game Changers for Business Owners</h2>
     <ul>
       <li>Automate 80% of sales tasks—free up your calendar</li>
       <li>Scale instantly—no extra headcount needed</li>
@@ -607,6 +579,28 @@ src="https://www.facebook.com/tr?id=1089039574891097&ev=PageView&noscript=1"
       <li>Swap templates in seconds—pivot on a dime</li>
       <li>Data-driven optimizations for max ROI</li>
     </ul>
+  </section>
+
+  <!-- All-in-One Marketing Engine -->
+  <section id="marketing-engine" class="section-white-box">
+    <h2 class="center">All-in-One Marketing Engine</h2>
+    <div class="ai-grid">
+      <div class="ai-card">
+        <h3>Consolidate Your Subscriptions</h3>
+        <p>Unify your CRM, dialer, mass-texting, lead data, automations and VAs under one $99 plan.</p>
+        <img src="https://via.placeholder.com/300x150" alt="Consolidate Your Subscriptions">
+      </div>
+      <div class="ai-card">
+        <h3>24/7 AI Assistant</h3>
+        <p>Our AI voice agent qualifies leads, schedules appointments, and handles follow-ups so you can close.</p>
+        <img src="https://via.placeholder.com/300x150" alt="24/7 AI Assistant">
+      </div>
+      <div class="ai-card">
+        <h3>Built by Investment Pros</h3>
+        <p>Designed by dealmakers for closers—thousands use this platform daily to outperform competitors.</p>
+        <img src="https://via.placeholder.com/300x150" alt="Built by Investment Pros">
+      </div>
+    </div>
   </section>
 
   <!-- Smart AI for Qualifying, Fulfillment & Upsell -->
@@ -631,28 +625,6 @@ src="https://www.facebook.com/tr?id=1089039574891097&ev=PageView&noscript=1"
     </div>
   </section>
 
-  <!-- All-in-One Marketing Engine -->
-  <section id="marketing-engine" class="section-white-box">
-    <h2>All-in-One Marketing Engine</h2>
-    <div class="ai-grid">
-      <div class="ai-card">
-        <h3>Consolidate Your Subscriptions</h3>
-        <p>Unify your CRM, dialer, mass-texting, lead data, automations and VAs under one $99 plan.</p>
-        <img src="https://via.placeholder.com/300x150" alt="Consolidate Subscriptions">
-      </div>
-      <div class="ai-card">
-        <h3>24/7 AI Assistant</h3>
-        <p>Our AI voice agent qualifies leads, schedules appointments, and handles follow-ups so you can close.</p>
-        <img src="https://via.placeholder.com/300x150" alt="24/7 AI Assistant">
-      </div>
-      <div class="ai-card">
-        <h3>Built by Investment Pros</h3>
-        <p>Designed by dealmakers for closers—thousands use this platform daily to outperform competitors.</p>
-        <img src="https://via.placeholder.com/300x150" alt="Built by Investment Pros">
-      </div>
-    </div>
-  </section>
-
   <!-- Never Miss a Sale -->
   <section id="usecases" class="section-black-full">
     <h2 class="center">Never Miss a Sale</h2>
@@ -669,7 +641,7 @@ src="https://www.facebook.com/tr?id=1089039574891097&ev=PageView&noscript=1"
 
   <!-- Why BizBuild? -->
   <section id="whyus" class="section-black-full">
-    <h2>Why BizBuild?</h2>
+    <h2 class="center">Why BizBuild?</h2>
     <ul>
       <li>Instant responses build trust at first touch</li>
       <li>Emotion-driven messaging ignites desire</li>
@@ -680,15 +652,90 @@ src="https://www.facebook.com/tr?id=1089039574891097&ev=PageView&noscript=1"
   </section>
 
   <!-- Tiers -->
-  <section id="tiers" class="section-black-full">
-    <div style="border:1px solid var(--gold); padding:40px 20px; border-radius:8px;">
-      <h2 id="tiers-title">Choose Your Launch Package</h2>
-      <!-- Tier boxes omitted for brevity -->
+  <section id="tiers">
+    <div class="tier-wrapper">
+      <h2 class="center">Choose Your Launch Package</h2>
+
+      <div class="tier-box">
+        <h3>TIER 1: DONE-WITH-YOU</h3>
+        <p>Launch-ready funnel in 72 hours. You pick the template. We wire the automations. No revisions. Just results.</p>
+        <div class="price">$249 setup | $99/mo</div>
+        <ul>
+          <li>Conversion-optimized funnel template</li>
+          <li>Fully wired automations (booking, payment, CRM)</li>
+          <li>Calendar + funnel dashboard</li>
+          <li>Self-managed product library (images, pricing, inventory)</li>
+          <li>Stripe or PayPal checkout integration</li>
+          <li>24/7 AI-Powered Sales Assistant
+            <span>• Answers product/service questions instantly—even at 2 AM</span>
+            <span>• Converts browsers into buyers via smart chat logic</span>
+          </li>
+          <li>Automated Sales Engine
+            <span>• Abandoned-cart recovery (SMS + email)</span>
+            <span>• Post-purchase upsells & cross-sells</span>
+            <span>• Loyalty flows & repeat-purchase triggers</span>
+            <span>• Review-request automations</span>
+          </li>
+          <li>Auto-Booking Engine (services)
+            <span>• Appointments auto-booked—no manual scheduling</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="tier-box">
+        <h3>TIER 2: DONE-FOR-YOU</h3>
+        <div class="price">$999 setup | $99/mo</div>
+        <ul>
+          <li>Fully custom funnel design</li>
+          <li>Copywriting & branding optimization</li>
+          <li>Product library setup + image uploads</li>
+          <li>Monthly campaign deployment & performance tuning</li>
+          <li>Advanced AI Sales Assistant
+            <span>• Smart routing to support, fulfillment, or sales</span>
+            <span>• Optional helpdesk/ticketing integration</span>
+          </li>
+          <li>Enhanced Sales Engine
+            <span>• Loyalty triggers & reactivation flows</span>
+            <span>• Dynamic upsell logic</span>
+          </li>
+          <li>Auto-Booking + Follow-Up Sequences
+            <span>• Cold leads warmed with emotionally intelligent nurture</span>
+          </li>
+          <li>Integrated Payment Gateway
+            <span>• Subscriptions, trials & one-offs wired</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="tier-box">
+        <h3>TIER 3: PERFORMANCE PARTNER</h3>
+        <div class="price">$4,999 setup | $199/mo</div>
+        <ul>
+          <li>Everything in Done-For-You, plus:</li>
+          <li>Weekly performance audits & A/B tests</li>
+          <li>Custom campaigns from our asset vault</li>
+          <li>Quarterly funnel rebuilds + strategic pivots</li>
+          <li>Enterprise AI Sales System
+            <span>• Bespoke chat—custom logic & multi-channel routing</span>
+            <span>• Fulfillment triggers & support handoffs</span>
+          </li>
+          <li>Full Funnel Optimization Engine
+            <span>• Multi-variant product logic</span>
+            <span>• Inventory syncing & upsell testing</span>
+          </li>
+          <li>Advanced Booking + Follow-Up Logic
+            <span>• Personalized sequences based on behavior & funnel stage</span>
+          </li>
+          <li>Multi-Gateway Payment Logic
+            <span>• Stripe + PayPal + optional add-ons wired for scale</span>
+          </li>
+        </ul>
+      </div>
+
     </div>
   </section>
 
 </main>
-
 
 
 <!-- START: Section Divider -->
